@@ -202,5 +202,13 @@ div, p {
     color: #6DA0A9;
 }
 
+.single-event-description p {
+    color: #666666;
+}
+
+.tribe-events-single-event-title {
+    color: #383838;
+}
+
 
 /*************************************************** END EVENT SINGLE PAGE STYLES ***************************************************/

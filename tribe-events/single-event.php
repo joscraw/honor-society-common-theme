@@ -34,14 +34,22 @@ $event_id = get_the_ID();
     </nav>
 </div>
 
+<div>
+    <?php the_title( '<h1 class="tribe-events-single-event-title">', '</h1>' ); ?>
+</div>
+
+<div class="single-event-description">
+    <?php the_content(); ?>
+</div>
+
 <div id="tribe-events-content" class="tribe-events-single">
 
     <div class="single-event-left-column">
+
         <h3>Location</h3>
         <div class="single-event-map"><?php tribe_get_template_part( 'modules/meta/map' ); ?></div>
 
         <?php do_action( 'tribe_events_single_event_after_the_meta' ) ?>
-
 
     </div>
     <div class="single-event-right-column">
