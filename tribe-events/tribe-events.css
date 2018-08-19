@@ -1,0 +1,145 @@
+/*************************************************** START EVENTS LIST STYLES ***************************************************/
+
+/* --- START COLORS http://chir.ag/projects/name-that-color --- */
+
+.white {
+    color: #FFFFFF;
+}
+
+.mine-shaft {
+    color: #383838;
+}
+
+.dove-gray {
+    color: #666666;
+}
+
+.dove-gray-blend {
+    color: #D5D5D5;
+}
+
+.old-brick {
+    color: #9E1D25;
+}
+.gothic {
+    color: #6DA0A9;
+}
+
+.luxor-gold {
+    color: #AC8B3A;
+}
+/* --- END COLORS http://chir.ag/projects/name-that-color --- */
+
+
+/*
+div, p {
+    padding: 10px;
+}
+
+
+*/
+
+
+
+
+.list-event-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tribe-events-title-bar {
+    display: flex;
+    align-items: center;
+}
+
+.calendar-icon-container {
+    padding-right: 20px;
+}
+
+.tribe-events-nav-previous a, .tribe-events-nav-next a{
+    color: #6DA0A9;
+}
+
+.list-event {
+    border-top: 1px solid #D5D5D5;
+    border-bottom: 1px solid #D5D5D5;
+    box-sizing: border-box;
+    padding: 50px 20px 50px 0;
+    flex: 50%;
+}
+
+.list-event:nth-child(2) {
+    border-right: none;
+    border-left: 1px solid #D5D5D5;
+    padding-left: 20px;
+}
+
+
+.tribe-events-page-title {
+    text-align: left;
+    color: #383838;
+}
+
+.list-event-title h3 {
+    font-size: 21px;
+}
+
+.list-event-header {
+    display: flex;
+}
+
+.list-event-title {
+    width: 50%;
+}
+
+.list-event-title h3 a {
+    color: #383838;
+}
+
+.list-event-rsvp {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.list-event-rsvp .tribe-button {
+    color: #FFFFFF;
+    border: 1px solid #666666;
+    background-color: #9E1D25;
+    cursor: pointer;
+    float: right;
+}
+
+.list-event-rsvp .ticket-cost {
+    display: none;
+}
+.list-event-rsvp .tribe-tickets-left {
+    display: none;
+}
+
+.list-event-description p {
+    color: #666666;
+    font-size: 14px;
+}
+
+.list-event-footer {
+    display: flex;
+}
+
+.list-event-location {
+    width: 33%;
+    color: #6DA0A9;
+}
+
+.list-event-date {
+    width: 33%;
+    color: #6DA0A9;
+}
+
+.list-event-time {
+    width: 33%;
+    color: #6DA0A9;
+}
+
+/*************************************************** END EVENTS LIST STYLES ***************************************************/
