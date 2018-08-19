@@ -28,6 +28,10 @@
 .luxor-gold {
     color: #AC8B3A;
 }
+
+.cornflower-blue {
+    color: #6195ED;
+}
 /* --- END COLORS http://chir.ag/projects/name-that-color --- */
 
 
@@ -50,6 +54,8 @@ div, p {
 .tribe-events-title-bar {
     display: flex;
     align-items: center;
+    margin-bottom: -30px;
+    padding-top: 20px;
 }
 
 .calendar-icon-container {
@@ -61,8 +67,8 @@ div, p {
 }
 
 .list-event {
-    border-top: 1px solid #D5D5D5;
-    border-bottom: 1px solid #D5D5D5;
+    border-top: 1px solid #D7E5E8;
+    border-bottom: 1px solid #D7E5E8;
     box-sizing: border-box;
     padding: 50px 20px 50px 0;
     flex: 50%;
@@ -70,7 +76,7 @@ div, p {
 
 .list-event:nth-child(2) {
     border-right: none;
-    border-left: 1px solid #D5D5D5;
+    border-left: 1px solid #D7E5E8;
     padding-left: 20px;
 }
 
