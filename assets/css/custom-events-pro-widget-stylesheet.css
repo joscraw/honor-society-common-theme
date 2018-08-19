@@ -1,0 +1,26 @@
+/*
+.tribe-mini-calendar thead {
+    background-color: #9E1D25 !important;
+    color: #FFFFFF !important;
+}
+
+.tribe-mini-calendar-dayofweek {
+    background-color: #6DA0A9 !important;
+}
+
+.tribe-mini-calendar-nav a {
+    font-family: avenir, 'sans-serif';
+}*/
+
+.tribe-mini-calendar thead {
+    background-color: #9E1D25 !important;
+    color: #FFFFFF !important;
+}
+
+.tribe-events-has-events a {
+    color: #6DA0A9 !important;
+}
+
+.tribe-events-thismonth {
+    font-family: avenir, 'sans-serif';
+}

@@ -54,7 +54,6 @@ div, p {
 .tribe-events-title-bar {
     display: flex;
     align-items: center;
-    margin-bottom: -30px;
     padding-top: 20px;
 }
 
@@ -62,8 +61,16 @@ div, p {
     padding-right: 20px;
 }
 
-.tribe-events-nav-previous a, .tribe-events-nav-next a{
+.single-event-nav-previous a, .single-event-nav-next a, .tribe-events-nav-previous a, .tribe-events-nav-next a {
     color: #6DA0A9;
+}
+
+.single-event-nav-previous {
+    float: left !important;
+}
+
+.single-event-nav-next {
+    float: right !important;
 }
 
 .list-event {
@@ -95,7 +102,7 @@ div, p {
 }
 
 .list-event-title {
-    width: 50%;
+    width: 70%;
 }
 
 .list-event-title h3 a {
@@ -103,7 +110,7 @@ div, p {
 }
 
 .list-event-rsvp {
-    width: 50%;
+    width: 30%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -149,3 +156,51 @@ div, p {
 }
 
 /*************************************************** END EVENTS LIST STYLES ***************************************************/
+
+/*************************************************** START EVENT SINGLE PAGE STYLES ***************************************************/
+
+.single-event-header {
+    margin-top: 20px;
+}
+
+.tribe-events-single {
+    display: flex;
+}
+
+.single-event-map {
+    width: 80%;
+}
+
+.single-event-left-column {
+    width: 70%;
+}
+
+.single-event-right-column {
+    width: 30%;
+}
+
+.tribe-button--rsvp {
+    background-color: #6DA0A9;
+    color: #FFFFFF;
+    padding: 9px 12px;
+}
+
+.tribe-button--no-rsvp {
+    border-radius: 3px;
+    line-height: 1;
+    margin: 10px;
+    padding: 9px 12px;
+    background-color: #9E1D25;
+    color: #FFFFFF;
+}
+
+.tribe-tickets-order_status-row {
+    display: none;
+}
+
+.tribe-link-view-attendee a, .tribe-mini-calendar-event a{
+    color: #6DA0A9;
+}
+
+
+/*************************************************** END EVENT SINGLE PAGE STYLES ***************************************************/
