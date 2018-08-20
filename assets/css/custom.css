@@ -108,17 +108,35 @@ p, span {
 }
 
 .bottom-content .tab {
+    cursor: pointer;
     height: 100px;
     box-sizing: border-box;
     flex: 30%;
     background-color: #AC8B3A;
     color: #FFF;
-    padding: 30px 10px;
     border-radius: 10px;
     margin: 5px 10px 30px 5px;
-    font-family: avenir, 'sans-serif';
-    position: relative;;
+    position: relative;
 
+}
+
+.bottom-content .tab a {
+    color: #FFF;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.bottom-content .tab a span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: avenir, 'sans-serif';
 }
 
 .bottom-content .tab .tab-text {
@@ -132,6 +150,7 @@ p, span {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    padding-left: 10px;
 }
 
 

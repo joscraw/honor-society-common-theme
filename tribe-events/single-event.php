@@ -39,7 +39,14 @@ $event_id = get_the_ID();
 </div>
 
 <div class="single-event-description">
+    <?php tribe_the_notices() ?>
+    <?php echo tribe_events_event_schedule_details( $event_id, '<h2>', '</h2>' ); ?>
     <?php the_content(); ?>
+    <?php if ( tribe_get_cost() ) : ?>
+        <span class="tribe-events-cost">Cost: <?php echo tribe_get_cost( null, true ) ?></span>
+    <?php endif; ?>
+
+    <?php tribe_get_template_part( 'modules/meta/venue' ); ?>
 </div>
 
 <div id="tribe-events-content" class="tribe-events-single">
