@@ -57,4 +57,82 @@ p, span {
     margin: 0 auto;
     max-width: 1200px;
 }
+
+
 /*************************************************** END MAIN CONTENT STYLES ***************************************************/
+
+/*************************************************** START HOMEPAGE STYLES ***************************************************/
+
+.main-content {
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+.main-content .top-content {
+    display: flex;
+}
+
+.main-content .top-content {
+    display: flex;
+}
+
+.homepage-moot-container {
+    width: 50%;
+    border: 1px solid #D7E5E8;
+    padding: 10px;
+    margin-right: 10%;
+    height: 500px;
+    overflow-y: scroll;
+}
+
+.homepage-calendar {
+    width: 30%;
+    border: 1px solid #D7E5E8;
+    padding: 10px;
+}
+
+.tribe-events-title a {
+    color: #6DA0A9;
+}
+
+.bottom-content {
+    background-color: #383838;
+    padding: 50px 0;
+}
+
+.bottom-content .main-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.bottom-content .tab {
+    height: 100px;
+    box-sizing: border-box;
+    flex: 30%;
+    background-color: #AC8B3A;
+    color: #FFF;
+    padding: 30px 10px;
+    border-radius: 10px;
+    margin: 5px 10px 30px 5px;
+    font-family: avenir, 'sans-serif';
+    position: relative;;
+
+}
+
+.bottom-content .tab .tab-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bottom-content .tab .tab-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+/*************************************************** END HOMEPAGE STYLES ***************************************************/
