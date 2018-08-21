@@ -1,45 +1,46 @@
-html, body.login {
-    background-color: #FFF;
+/*************************************************** START LOGIN PAGE STYLES ***************************************************/
+
+html, body, .main-content, .login-container {
+    height: 100%;
 }
 
-.login form{
-    box-shadow:none;
-    padding:20px;
-}
-#login {
-    background:
-            #FFF;
-    margin: 50px auto;
-    padding: 40px 20px;
-    width: 400px;
-}
-.login label {
-    color:
-            #555;
-    font-size: 14px;
-}
-.login form .forgetmenot{
-    float:none;
+.login-container {
+    display: flex;
+    background-image: url(../images/rectangle.png), url(../images/student.png);
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto;
+    background-position: 485px -230px, 390px -300px;
 }
 
-#login form p.submit{
-    margin-top:15px;
-}
-.login.wp-core-ui .button-primary {
-    background:
-            #7B417A;
-    border-color:
-            #7B417A;
-    box-shadow: 0 1px 0
-    #7B417A;
-    color:
-            #FFF;
-    text-shadow: none;
-    float: none;
-    clear: both;
+.login-container input[type="text"], .login-container input[type="password"] {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
     display: block;
-    width: 100%;
-    padding: 7px;
-    height: auto;
-    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
+
+.login-container input[type="submit"] {
+    color: #FFFFFF;
+    border: 1px solid #666666;
+    background-color: #9E1D25;
+    cursor: pointer;
+    border-radius: 3px;
+    line-height: 1;
+    padding: 9px 12px;
+    font-size: 16px;
+}
+
+.login-container .login-form {
+    padding-left: 100px;
+    width: 50%;
+}
+
+.login-form img {
+    margin-left: -20px;
+}
+
+
+/*************************************************** END LOGIN PAGE STYLES ***************************************************/
