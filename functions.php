@@ -57,6 +57,7 @@ function redirect_from_events( $query ) {
     exit;
 }*/
 
+/* ------------------------------------ START LOGIN LOGIC ------------------------------------*/
 
 /* Main redirection of the default login page */
 function redirect_login_page() {
@@ -97,8 +98,4 @@ function logout_redirect() {
 add_action('wp_logout','logout_redirect');
 
 
-/*function my_custom_login()
-{
-    echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('stylesheet_directory') . '/assets/css/login.css" />';
-}
-add_action('login_head', 'my_custom_login');*/
+/* ------------------------------------ END LOGIN LOGIC ------------------------------------*/

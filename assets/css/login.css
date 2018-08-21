@@ -6,11 +6,16 @@ html, body, .main-content, .login-container {
 
 .login-container {
     display: flex;
-    background-image: url(../images/rectangle.png), url(../images/student.png);
+    background-image: url(../images/student.png);
     background-repeat: no-repeat, no-repeat;
-    background-size: auto;
-    background-position: 485px -230px, 390px -300px;
+    background-position: 300px -440px;
+
+    /*background-image: url(../images/rectangle.png), url(../images/student.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: 560px -400px, 500px -300px;*/
+    background-size: cover;
 }
+
 
 .login-container input[type="text"], .login-container input[type="password"] {
     width: 70%;
