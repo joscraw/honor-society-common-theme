@@ -36,12 +36,13 @@ $more = false;
         $args = [
             'post_type' => 'contacts',
             'posts_per_page' => 1,
-            'meta_query' => [
-                [
-                    'meta_key' => 'portal_user',
-                    'meta_value' => $current_user_id
-                ]
-            ]
+            'meta_query'	=> array(
+                array(
+                    'key'	  	=> 'portal_user',
+                    'value'	  	=> $current_user_id,
+                    'compare' 	=> '=',
+                ),
+            ),
         ];
 
         $query = new WP_Query($args);
@@ -64,27 +65,13 @@ $more = false;
                 'post_status'=>'publish',
                 'post_type'=>array(TribeEvents::POSTTYPE),
                 'posts_per_page'=>10,
-                'meta_query' => [
-                    [
-                        'meta_key' => 'chapter',
-                        'meta_value' => $chapter_id
-                    ]
-                ]
-              /*  //order by startdate from newest to oldest
-                'meta_key'=>'_EventStartDate',
-                'orderby'=>'_EventStartDate',
-                'order'=>'DESC',
-                //required in 3.x
-                'eventDisplay'=>'custom',
-                //query events by category
-                'tax_query' => array(
+                'meta_query'	=> array(
                     array(
-                        'taxonomy' => 'tribe_events_cat',
-                        'field' => 'slug',
-                        'terms' => 'featured',
-                        'operator' => 'IN'
+                        'key'	  	=> 'chapter',
+                        'value'	  	=> $chapter_id,
+                        'compare' 	=> '=',
                     ),
-                )*/
+                )
             );
 
             $query = new WP_Query();
