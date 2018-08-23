@@ -50,7 +50,6 @@ $more = false;
         {
             while ( $query->have_posts() ) {
                 $query->the_post();
-                $contact_id = get_the_ID();
                 $chapter_id = get_post_meta( get_the_ID(), 'account_name', true);
                 break;
             }
@@ -58,41 +57,19 @@ $more = false;
 
         wp_reset_postdata();
 
-        // NOW LETS GET THE CHAPTER THAT THE CONTACT BELONGS TO
+
         if(isset($chapter_id))
         {
-            $args = [
-                'post_type' => 'chapters',
-                'posts_per_page' => 1,
-                'meta_query' => [
-                    [
-                        'meta_key' => 'ID',
-                        'meta_value' => $chapter_id
-                    ]
-                ]
-            ];
-
-            $query = new WP_Query($args);
-
-            if ( $query->have_posts() )
-            {
-                while ( $query->have_posts() ) {
-                    $query->the_post();
-                    $chapter_officer_user_id = get_post_meta( get_the_ID(), 'chapter_officer', true);
-                    break;
-                }
-            }
-
-            wp_reset_postdata();
-        }
-
-        if(isset($chapter_officer_user_id))
-        {
             $args = array(
-                'author__in'  => $chapter_officer_user_id,
                 'post_status'=>'publish',
                 'post_type'=>array(TribeEvents::POSTTYPE),
                 'posts_per_page'=>10,
+                'meta_query' => [
+                    [
+                        'meta_key' => 'chapter',
+                        'meta_value' => $chapter_id
+                    ]
+                ]
               /*  //order by startdate from newest to oldest
                 'meta_key'=>'_EventStartDate',
                 'orderby'=>'_EventStartDate',
