@@ -19,6 +19,7 @@ $events_label_singular = tribe_get_event_label_singular();
 $events_label_plural   = tribe_get_event_label_plural();
 
 $event_id = get_the_ID();
+$post = get_post($event_id);
 
 ?>
 
@@ -40,13 +41,14 @@ $event_id = get_the_ID();
 
 <div class="single-event-description">
     <?php tribe_the_notices() ?>
-    <?php echo tribe_events_event_schedule_details( $event_id, '<h2>', '</h2>' ); ?>
+    <?php /*echo tribe_events_event_schedule_details( $event_id, '<h2>', '</h2>' ); */?>
     <?php the_content(); ?>
-    <?php if ( tribe_get_cost() ) : ?>
-        <span class="tribe-events-cost">Cost: <?php echo tribe_get_cost( null, true ) ?></span>
-    <?php endif; ?>
+    <?php /*if ( tribe_get_cost() ) : */?><!--
+        <span class="tribe-events-cost">Cost: <?php /*echo tribe_get_cost( null, true ) */?></span>
+    --><?php /*endif; */?>
 
     <?php tribe_get_template_part( 'modules/meta/venue' ); ?>
+
 </div>
 
 <div id="tribe-events-content" class="tribe-events-single">
@@ -62,6 +64,17 @@ $event_id = get_the_ID();
     <div class="single-event-right-column">
         <h3>Date and Time</h3>
         <div class="single-event-calendar"><?php echo do_shortcode('[tribe_mini_calendar]'); ?></div>
+        <div class="single-event-time">
+            <span>
+             <img src="<?php echo get_template_directory_uri() . '/assets/images/time_icon.png'; ?>">
+                <?php
+                echo sprintf("%s - %s",
+                    (new DateTime($post->EventStartDate))->format("g:i A"),
+                    (new DateTime($post->EventEndDate))->format("g:i A")
+                );
+                ?>
+            </span>
+        </div>
     </div>
 
 </div><!-- #tribe-events-content -->

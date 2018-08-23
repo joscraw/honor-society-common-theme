@@ -19,16 +19,37 @@ $website = tribe_get_venue_website_link();
 ?>
 
 <div class="tribe-events-meta-group tribe-events-meta-group-venue">
-	<h2 class="tribe-events-single-section-title"> <?php esc_html_e( tribe_get_venue_label_singular(), 'the-events-calendar' ) ?> </h2>
+
+    <div>
+        <?php
+        echo sprintf("%s %s %s, %s %s %s",
+            tribe_get_venue(),
+            tribe_get_address(),
+            tribe_get_city(),
+            tribe_get_state(),
+            tribe_get_zip(),
+            tribe_get_country()
+            );
+        ?>
+    </div>
+    <div>
+        <?php if ( ! empty( $phone ) ): ?>
+            Phone: <?php echo $phone ?>
+        <?php endif ?>
+    </div>
+
+
+
+	<!--<h2 class="tribe-events-single-section-title"> <?php /*esc_html_e( tribe_get_venue_label_singular(), 'the-events-calendar' ) */?> </h2>-->
 	<dl>
 		<?php do_action( 'tribe_events_single_meta_venue_section_start' ) ?>
 
-		<dd class="tribe-venue"> <?php echo tribe_get_venue() ?> </dd>
+		<!--<dd class="tribe-venue"> <?php /*echo tribe_get_venue() */?> </dd>-->
 
 		<?php if ( tribe_address_exists() ) : ?>
 			<dd class="tribe-venue-location">
 				<address class="tribe-events-address">
-					<?php echo tribe_get_full_address(); ?>
+					<?php /*echo tribe_get_full_address(); */?>
 
 					<?php /*if ( tribe_show_google_map_link() ) : */?><!--
 						<?php /*echo tribe_get_map_link_html(); */?>
@@ -38,8 +59,8 @@ $website = tribe_get_venue_website_link();
 		<?php endif; ?>
 
 		<?php if ( ! empty( $phone ) ): ?>
-			<dt class="tribe-venue-tel-label"> <?php esc_html_e( 'Phone:', 'the-events-calendar' ) ?> </dt>
-			<dd class="tribe-venue-tel"> <?php echo $phone ?> </dd>
+			<!--<dt class="tribe-venue-tel-label"> <?php /*esc_html_e( 'Phone:', 'the-events-calendar' ) */?> </dt>
+			<dd class="tribe-venue-tel"> <?php /*echo $phone */?> </dd>-->
 		<?php endif ?>
 
 		<?php if ( ! empty( $website ) ): ?>

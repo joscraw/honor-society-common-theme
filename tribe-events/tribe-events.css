@@ -210,5 +210,12 @@ div, p {
     color: #383838;
 }
 
+.single-event-time span {
+    color: #383838;
+    font-size: 21px;
+    font-weight: bold;
+    font-family: avenir, 'sans-serif';
+}
+
 
 /*************************************************** END EVENT SINGLE PAGE STYLES ***************************************************/

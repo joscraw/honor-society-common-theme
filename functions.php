@@ -99,3 +99,30 @@ add_action('wp_logout','logout_redirect');
 
 
 /* ------------------------------------ END LOGIN LOGIC ------------------------------------*/
+
+
+add_filter('tribe_events_get_current_month_day', function($current_day){
+    global $post;
+    $post = get_post($post->ID);
+
+    // Display the calendar widget as normal if it isn't a single event post page
+    if($post && $post->post_type !== 'tribe_events')
+    {
+        return $current_day;
+    }
+
+    $current_date_time_obj = new \DateTime($current_day['date']);
+    $event_date_time_obj = new \DateTime($post->EventStartDate);
+
+    $firstDate = $current_date_time_obj->format('Y-m-d');
+    $secondDate = $event_date_time_obj->format('Y-m-d');
+
+    // Let's only show events for the calendar widget
+    if($firstDate !== $secondDate)
+    {
+        $current_day['total_events'] = "0";
+    }
+
+    return $current_day;
+}, 10, 1);
+
