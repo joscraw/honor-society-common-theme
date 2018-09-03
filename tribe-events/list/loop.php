@@ -39,6 +39,7 @@ $more = false;
                 $post_parent = ' data-parent-post-id="' . absint( $post->post_parent ) . '"';
             }
             ?>
+
             <div class="list-event" id="post-<?php the_ID() ?>" <?php echo $post_parent; ?>>
 
                 <?php
@@ -55,7 +56,6 @@ $more = false;
 
                 // Organizer
                 $organizer = tribe_get_organizer();
-
                 ?>
 
                 <div class="list-event-header">
@@ -67,6 +67,7 @@ $more = false;
                             </a>
                         </h3>
                     </div>
+
                     <!-- Event Cost -->
                     <?php if ( tribe_get_cost() ) : ?>
                         <div class="list-event-rsvp">
@@ -78,30 +79,6 @@ $more = false;
                              * @since 4.5
                              */
                             do_action( 'tribe_events_inside_cost' );
-
-                            global $crmConnectorFrontend;
-
-                            $current_user_id = $crmConnectorFrontend->data['current_user_id'];
-                            $current_user_roles = $crmConnectorFrontend->data['current_user_roles'];
-
-                            if($current_user_id === 0 || empty($current_user_roles))
-                            {
-                                return '';
-                            }
-
-                            if (in_array( 'administrator', $current_user_roles ) ||
-                                in_array( 'chapter_adviser', $current_user_roles ) ||
-                                in_array( 'chapter_officer', $current_user_roles ) ||
-                                in_array( 'honor_society_admin', $current_user_roles ))
-                            {
-                                ob_start();
-                                ?>
-                                <a href="/chapter-rsvp-confirmation?event_id=<?php echo $post->ID; ?>" class="tribe-button--rsvp">RSVP Confirmations</a>
-                                <?php
-                                $html = ob_get_clean();
-                                echo $html;
-                            }
-
                             ?>
                         </div>
                     <?php endif; ?>
@@ -109,16 +86,17 @@ $more = false;
 
                 <!-- event description -->
                 <div class="list-event-description">
-                    <?php echo tribe_events_get_the_excerpt( null, wp_kses_allowed_html( 'post' ) ); ?>
+                    <?php echo get_the_excerpt(); ?>
                 </div><!-- .tribe-events-list-event-description -->
 
                 <div class="list-event-footer">
                     <div class="list-event-location">
                         <span>
                             <img src="<?php echo get_template_directory_uri() . '/assets/images/location_icon.png'; ?>">
-                            <?php echo tribe_get_city() . ', ' .tribe_get_state(); ?>
+                            <?php echo tribe_get_city($post->ID) . ', ' .tribe_get_state($post->ID); ?>
                         </span>
                     </div>
+
                     <div class="list-event-date">
                    <span>
                        <?php echo (new DateTime($post->EventStartDate))->format("j M"); ?>

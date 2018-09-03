@@ -105,13 +105,40 @@ add_filter('tribe_events_get_current_month_day', function($current_day){
     global $post;
     $post = get_post($post->ID);
 
-    // Display the calendar widget as normal if it isn't a single event post page
-    if($post && $post->post_type !== 'tribe_events')
+    if($current_day['total_events'] === 0)
     {
         return $current_day;
     }
 
-    $current_date_time_obj = new \DateTime($current_day['date']);
+    // get the event from the current day then see if the user is assigned to that event
+    // need to create a new query in the event search
+
+    $search = new \CRMConnector\Events\EventSearch();
+    $query = $search->getEventsForLoggedInUserByRole();
+
+    $logged_in_user_event_ids = [];
+    if ( $query && $query->have_posts() ) {
+        while ($query->have_posts()) {
+            $query->the_post();
+            $logged_in_user_event_ids[] = get_the_ID();
+        }
+    }
+
+    if(!empty($current_day['events']->posts))
+    {
+        foreach($current_day['events']->posts as $key => $event)
+        {
+            if(!in_array($event->ID, $logged_in_user_event_ids))
+            {
+                unset($current_day['events']->posts[$key]);
+                $total_events = (int) $current_day['total_events'];
+                $total_events--;
+                $current_day['total_events'] = strval($total_events);
+            }
+        }
+    }
+
+/*    $current_date_time_obj = new \DateTime($current_day['date']);
     $event_date_time_obj = new \DateTime($post->EventStartDate);
 
     $firstDate = $current_date_time_obj->format('Y-m-d');
@@ -121,7 +148,7 @@ add_filter('tribe_events_get_current_month_day', function($current_day){
     if($firstDate !== $secondDate)
     {
         $current_day['total_events'] = "0";
-    }
+    }*/
 
     return $current_day;
 }, 10, 1);
