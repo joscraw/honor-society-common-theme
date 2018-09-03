@@ -77,7 +77,31 @@ $more = false;
                              *
                              * @since 4.5
                              */
-                            do_action( 'tribe_events_inside_cost' )
+                            do_action( 'tribe_events_inside_cost' );
+
+                            global $crmConnectorFrontend;
+
+                            $current_user_id = $crmConnectorFrontend->data['current_user_id'];
+                            $current_user_roles = $crmConnectorFrontend->data['current_user_roles'];
+
+                            if($current_user_id === 0 || empty($current_user_roles))
+                            {
+                                return '';
+                            }
+
+                            if (in_array( 'administrator', $current_user_roles ) ||
+                                in_array( 'chapter_adviser', $current_user_roles ) ||
+                                in_array( 'chapter_officer', $current_user_roles ) ||
+                                in_array( 'honor_society_admin', $current_user_roles ))
+                            {
+                                ob_start();
+                                ?>
+                                <a href="/chapter-rsvp-confirmation?event_id=<?php echo $post->ID; ?>" class="tribe-button--rsvp">RSVP Confirmations</a>
+                                <?php
+                                $html = ob_get_clean();
+                                echo $html;
+                            }
+
                             ?>
                         </div>
                     <?php endif; ?>
