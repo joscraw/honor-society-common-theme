@@ -24,6 +24,7 @@ p, span {
     border-bottom: 1px solid #D8D8D8;
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .breadcrumb .breadcrumb-icon {
@@ -32,6 +33,11 @@ p, span {
 
 .breadcrumb-title h1 {
     color: #383838;
+}
+
+.search-form {
+    position: absolute;
+    right: 0;
 }
 
 
@@ -205,6 +211,8 @@ p, span {
     color: #9E1D25;
     margin-bottom: 20px;
 }
+
+
 
 /*************************************************** END SCHOLARSHIPS STYLES ***************************************************/
 

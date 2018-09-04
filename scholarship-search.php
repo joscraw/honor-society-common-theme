@@ -1,18 +1,3 @@
-<?php
-/**
- * The scholarships template file
- * To use this file you just need to go into the wordpress dashboard and create
- * a page with the url /scholarships
- *
- * Learn more: {@link https://codex.wordpress.org/Template_Hierarchy}
- *
- * @package WordPress
- * @subpackage Twenty_Fifteen
- * @since Twenty Fifteen 1.0
- */
-
-get_header(); ?>
-
 <main class="main-content">
 
     <div class="breadcrumb">
@@ -30,12 +15,13 @@ get_header(); ?>
     </div>
 
     <?php
-    $search = new \CRMConnector\Scholarships\ScholarshipSearch();
-    $query = $search->getAllScholarships();
-    while($query->have_posts()):
-    $query->the_post();
-    ?>
 
+    global $wp_query;
+    $total_results = $wp_query->found_posts;
+
+    while(have_posts()):
+        the_post();
+        ?>
         <div class="scholarships-container">
             <div class="scholarships-container-header">
                 <div>
@@ -51,14 +37,8 @@ get_header(); ?>
             </div>
         </div>
 
-    <?php
+        <?php
     endwhile;
     wp_reset_query();
     ?>
-
-
-
-
 </main>
-
-<?php get_footer(); ?>
