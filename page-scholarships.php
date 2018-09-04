@@ -24,8 +24,15 @@ get_header(); ?>
             <h1>Scholarships</h1>
         </div>
 
-        <div class="search-form">
-            <?php get_search_form(); ?>
+        <div class="search-form search-form--scholarships">
+            <?php // get_search_form(); ?>
+            <form role="search" method="get" id="" action="">
+                <div class="search-wrap">
+                    <label class="screen-reader-text" for="search">Search for:</label>
+                    <input type="search" placeholder="Search…" name="search" id="search-input" value="">
+                    <input class="screen-reader-text" type="submit" id="search-submit" value="Search">
+                </div>
+            </form>
         </div>
     </div>
 
@@ -53,6 +60,9 @@ get_header(); ?>
 
     <?php
     endwhile;
+    if (function_exists("pagination")) {
+        pagination($query->max_num_pages);
+    }
     wp_reset_query();
     ?>
 

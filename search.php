@@ -2,12 +2,7 @@
 
 <?php
 
-    $search_refer = $_GET['site_section'];
-
-    if($search_refer === 'scholarships')
-    {
-        load_template(TEMPLATEPATH . '/scholarship-search.php');
-    }
+    echo 'Global Search';
 
 ?>
 
