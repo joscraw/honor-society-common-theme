@@ -17,6 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $post;
 $post = get_post($post->ID);
+$search = new \CRMConnector\Events\EventSearch();
 // Don't display the list underneath the calendar on the single event page
 if($post && $post->post_type === 'tribe_events')
 {
@@ -28,12 +29,15 @@ if($post && $post->post_type === 'tribe_events')
 <div class="tribe-mini-calendar-list-wrapper">
 	<div class="tribe-events-loop">
 
-        <?php
-        $search = new \CRMConnector\Events\EventSearch();
-        $search->getEventsForLoggedInUserByRole();
-        ?>
-
 		<?php while ( have_posts() ) : the_post(); ?>
+
+            <?php
+            if(!$search->is_logged_in_user_allowed_to_attend_event($post))
+            {
+                continue;
+            }
+            ?>
+
 			<?php do_action( 'tribe_events_mini_cal_list_inside_before_loop' ); ?>
 
 			<!-- Event  -->
