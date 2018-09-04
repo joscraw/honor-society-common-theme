@@ -103,6 +103,25 @@ add_action('wp_logout','logout_redirect');
 
 add_filter('tribe_events_get_current_month_day', function($current_day){
 
+    // Don't display the list underneath the calendar on the single event page
+    if($current_day['total_events'] > 0)
+    {
+        $search = new \CRMConnector\Events\EventSearch();
+
+        $query = $current_day['events'];
+
+        $posts = $query->get_posts();
+
+        foreach($posts as $post)
+        {
+            if(!$search->is_logged_in_user_allowed_to_attend_event($post))
+            {
+                $current_day['total_events'] = 0;
+            }
+        }
+    }
+
     return $current_day;
+
 }, 10, 1);
 

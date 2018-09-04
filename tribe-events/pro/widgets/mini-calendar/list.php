@@ -34,13 +34,14 @@ if($post && $post->post_type === 'tribe_events')
             <?php
             if(!$search->is_logged_in_user_allowed_to_attend_event($post))
             {
-                global $wp_query;
-                $wp_query->reset_postdata();
+                /*global $wp_query;
+                $wp_query->reset_postdata();*/
+
                 continue;
             }
 
-            global $wp_query;
-            $wp_query->reset_postdata();
+           /* global $wp_query;
+            $wp_query->reset_postdata();*/
             ?>
 
 			<?php do_action( 'tribe_events_mini_cal_list_inside_before_loop' ); ?>
