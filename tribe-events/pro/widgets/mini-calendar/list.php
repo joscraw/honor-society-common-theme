@@ -28,6 +28,11 @@ if($post && $post->post_type === 'tribe_events')
 <div class="tribe-mini-calendar-list-wrapper">
 	<div class="tribe-events-loop">
 
+        <?php
+        $search = new \CRMConnector\Events\EventSearch();
+        $search->getEventsForLoggedInUserByRole();
+        ?>
+
 		<?php while ( have_posts() ) : the_post(); ?>
 			<?php do_action( 'tribe_events_mini_cal_list_inside_before_loop' ); ?>
 
