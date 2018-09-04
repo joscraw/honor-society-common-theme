@@ -7,6 +7,34 @@ p, span {
     font-family: 'EB Garamond', serif;
 }
 
+.button {
+    border-radius: 3px;
+    margin: 10px;
+    padding: 12px 40px;
+    background-color: #9E1D25;
+    color: #FFFFFF;
+    line-height: 20px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-family: avenir, 'sans-serif';
+}
+
+.breadcrumb {
+    border-bottom: 1px solid #D8D8D8;
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb .breadcrumb-icon {
+    padding-right: 20px;
+}
+
+.breadcrumb-title h1 {
+    color: #383838;
+}
+
+
 /*************************************************** END UITLS ***************************************************/
 
 /*************************************************** START MAIN HEADER STYLES ***************************************************/
@@ -57,7 +85,6 @@ p, span {
     margin: 0 auto;
     max-width: 1200px;
 }
-
 
 /*************************************************** END MAIN CONTENT STYLES ***************************************************/
 
@@ -155,3 +182,30 @@ p, span {
 
 
 /*************************************************** END HOMEPAGE STYLES ***************************************************/
+
+
+/*************************************************** START SCHOLARSHIPS STYLES ***************************************************/
+
+.scholarships-container {
+    border-bottom: 1px solid #D8D8D8;
+}
+
+.scholarships-container-header {
+    justify-content: space-between;
+    display: flex;
+}
+
+.scholarships-container-body {
+    color: #666666;
+    font-family: 'EB Garamond', serif;
+    margin-bottom: 20px;
+}
+
+.scholarships-container-footer {
+    color: #9E1D25;
+    margin-bottom: 20px;
+}
+
+/*************************************************** END SCHOLARSHIPS STYLES ***************************************************/
+
+
