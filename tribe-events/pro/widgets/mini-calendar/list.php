@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $post;
 $post = get_post($post->ID);
-$search = new \CRMConnector\Events\EventSearch();
+$search = new \CRMConnector\Database\EventSearch();
 // Don't display the list underneath the calendar on the single event page
 if($post && $post->post_type === 'tribe_events')
 {

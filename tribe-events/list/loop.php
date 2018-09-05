@@ -24,7 +24,7 @@ $more = false;
 
     <?php
 
-    $search = new \CRMConnector\Events\EventSearch();
+    $search = new \CRMConnector\Database\EventSearch();
     $query = $search->getEventsForLoggedInUserByRole();
 
     if ( $query && $query->have_posts() )

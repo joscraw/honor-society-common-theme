@@ -37,7 +37,7 @@ get_header(); ?>
     </div>
 
     <?php
-    $search = new \CRMConnector\Scholarships\ScholarshipSearch();
+    $search = new \CRMConnector\Database\ScholarshipSearch();
     $query = $search->getAllScholarships();
     while($query->have_posts()):
     $query->the_post();

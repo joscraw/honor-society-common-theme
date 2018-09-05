@@ -123,7 +123,7 @@ add_filter('tribe_events_get_current_month_day', function($current_day){
 
     if($current_day['total_events'] > 0)
     {
-        $search = new \CRMConnector\Events\EventSearch();
+        $search = new \CRMConnector\Database\EventSearch();
 
         $query = $current_day['events'];
 
