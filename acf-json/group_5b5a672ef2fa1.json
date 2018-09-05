@@ -1,0 +1,311 @@
+{
+    "key": "group_5b5a672ef2fa1",
+    "title": "Contact and Subscription Preferences",
+    "fields": [
+        {
+            "key": "field_5b5a676f47c38",
+            "label": "Do Not Mail",
+            "name": "do_not_mail",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5b5a678747c39",
+            "label": "Select Preferred Mailing Address",
+            "name": "select_preferred_mailing_address",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "67",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Permanent Address": "Permanent Address",
+                "Current Address": "Current Address"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5b5a67c847c3a",
+            "label": "Do Not Call",
+            "name": "do_not_call",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5b5a67eb47c3b",
+            "label": "Select Preferred Phone",
+            "name": "select_preferred_phone",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "67",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Mobile": "Mobile",
+                "Phone": "Phone"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5b5a680d47c3c",
+            "label": "Email Opt Out",
+            "name": "email_opt_out",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5b5a681547c3d",
+            "label": "Select Preferred Email",
+            "name": "select_preferred_email",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "67",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "School Email": "School Email",
+                "Personal Email": "Personal Email"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5b5a688247c3e",
+            "label": "Email - Scholar Connection E-Newsletter",
+            "name": "email_scholar_connection_enewsletter",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5b5a689b47c3f",
+            "label": "Email - Chapter Emails",
+            "name": "email_chapter_emails",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5b5a68af47c40",
+            "label": "Email - Careers",
+            "name": "email_careers",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5b5a68c247c41",
+            "label": "Email - Discounts and Other Opportunities",
+            "name": "email_discounts_and_other_opportunities",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5b5a68d147c42",
+            "label": "Email - Scholarships",
+            "name": "email_scholarships",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5b5a68e147c43",
+            "label": "Email - ScholarCon",
+            "name": "email_scholarcon",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5b5a69e347c4e",
+            "label": "Lead Source",
+            "name": "lead_source",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Blogging": "Blogging",
+                "Premium Content": "Premium Content",
+                "Organic Search": "Organic Search",
+                "Email Marketing": "Email Marketing",
+                "Digital Advertising": "Digital Advertising",
+                "Media Coverage": "Media Coverage",
+                "Social Media": "Social Media",
+                "Website": "Website",
+                "Direct Marketing": "Direct Marketing",
+                "Traditional Advertising": "Traditional Advertising",
+                "Sponsorships": "Sponsorships",
+                "Affiliate \/ Partner Programs": "Affiliate \/ Partner Programs",
+                "Events \/ Shows": "Events \/ Shows",
+                "Inbound Phone Calls": "Inbound Phone Calls",
+                "Outbound Sales": "Outbound Sales",
+                "Referrals": "Referrals",
+                "Speaking Engagements": "Speaking Engagements",
+                "Traditional \/ Offline Networking": "Traditional \/ Offline Networking"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "contacts"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1536113679
+}

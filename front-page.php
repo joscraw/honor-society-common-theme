@@ -55,7 +55,7 @@ get_header(); ?>
             <div class="tab-icon">
                 <img src="<?php echo get_template_directory_uri() . '/assets/images/tab-grad-hat.png'; ?>">
             </div>
-            <a href="#"><span>SCHOLARSHIPS</span></a>
+            <a href="/scholarships"><span>SCHOLARSHIPS</span></a>
         </div>
         <div class="tab">
             <div class="tab-icon">

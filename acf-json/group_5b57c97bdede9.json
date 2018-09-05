@@ -1,0 +1,424 @@
+{
+    "key": "group_5b57c97bdede9",
+    "title": "Member Engagement Snapshot",
+    "fields": [
+        {
+            "key": "field_5b57c98fb61b8",
+            "label": "Active Advisors",
+            "name": "active_advisorws",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_5b57c9a8b61b9",
+            "label": "Active Officers",
+            "name": "active_officers_",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_5b57c9b4b61ba",
+            "label": "Activity Reports",
+            "name": "activity_reports_",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "(YTD)",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_5b57c9d1b61bb",
+            "label": "DHMs Submitted",
+            "name": "dhms_submitted_",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "(YTD)",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_5b57ce40e6807",
+            "label": "Current Chapter Leadership",
+            "name": "current_chapter_leadership_",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5b57ce4ee6808",
+            "label": "Undergraduate Members",
+            "name": "undergraduate_members",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_5b57ce5ce6809",
+            "label": "New Members",
+            "name": "new_members",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_5b57ce69e680a",
+            "label": "Current Star Status",
+            "name": "current_star_status",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Platinum": "Platinum",
+                "Gold": "Gold",
+                "Silver": "Silver",
+                "Bronze": "Bronze",
+                "Active": "Active",
+                "New Chapter": "New Chapter"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5b57cf4a511a2",
+            "label": "Star Status Percentile",
+            "name": "star_status_percentile",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5b57cf61511a3",
+            "label": "Star Status Possible Points",
+            "name": "star_status_possible_points",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_5b57cf71511a4",
+            "label": "Star Status Actual Points",
+            "name": "star_status_actual_points",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_5b57ceabfa8f3",
+            "label": "FY 16 Status",
+            "name": "fy_16_status",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Platinum": "Platinum",
+                "Certified": "Certified",
+                "Gold": "Gold",
+                "Silver": "Silver",
+                "Bronze": "Bronze",
+                "Active": "Active",
+                "New Chapter": "New Chapter"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5b57cf1847622",
+            "label": "FY 15 Status",
+            "name": "fy_15_status_(copy)",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Platinum": "Platinum",
+                "Certified": "Certified",
+                "Gold": "Gold",
+                "Silver": "Silver",
+                "Bronze": "Bronze",
+                "Active": "Active",
+                "New Chapter": "New Chapter"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5b57cf1747621",
+            "label": "FY 14 Status",
+            "name": "fy_14_status_(copy)",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Platinum": "Platinum",
+                "Certified": "Certified",
+                "Gold": "Gold",
+                "Silver": "Silver",
+                "Bronze": "Bronze",
+                "Active": "Active",
+                "New Chapter": "New Chapter"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5b57cf1647620",
+            "label": "FY 13 Status",
+            "name": "fy_13_status_(copy)",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Platinum": "Platinum",
+                "Certified": "Certified",
+                "Gold": "Gold",
+                "Silver": "Silver",
+                "Bronze": "Bronze",
+                "Active": "Active",
+                "New Chapter": "New Chapter"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5b57cf154761f",
+            "label": "FY 12 Status",
+            "name": "fy_12_status_(copy)",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Platinum": "Platinum",
+                "Certified": "Certified",
+                "Gold": "Gold",
+                "Silver": "Silver",
+                "Bronze": "Bronze",
+                "Active": "Active",
+                "New Chapter": "New Chapter"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "chapters"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "permalink",
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments",
+        "revisions",
+        "slug",
+        "author",
+        "format",
+        "page_attributes",
+        "featured_image",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1536113761
+}
