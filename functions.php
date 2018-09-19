@@ -179,3 +179,13 @@ function pagination($pages = '', $range = 4)
         echo "</div>\n";
     }
 }
+
+add_theme_support( 'menus' );
+
+function register_theme_menus () {
+    register_nav_menus( [
+        'primary-menu' => _( 'Primary Menu' )
+    ] );
+}
+
+add_action( 'init', 'register_theme_menus' );

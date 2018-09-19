@@ -22,7 +22,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body>
+<body class="<?php body_class(); ?>">
 
 
 <?php get_template_part( 'inc/main', 'header' ); ?>

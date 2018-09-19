@@ -1,0 +1,9 @@
+{
+  "name": "honor-society-common-theme",
+  "description": "Common Theme for the honor society",
+  "type": "wordpress-theme",
+  "license": "proprietary",
+  "require": {
+    "composer/installers": "^1.0"
+  }
+}
