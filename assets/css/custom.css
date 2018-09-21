@@ -1,3 +1,15 @@
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 16px;
+    font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
+}
+
 /*************************************************** START UITLS ***************************************************/
 
 h1, h2, h3, h4, h5, h6, a, button, input[type="button"], input[type="submit"], label {
@@ -217,3 +229,315 @@ p, span {
 /*************************************************** END SCHOLARSHIPS STYLES ***************************************************/
 
 
+.page-template-template-student-signup header,
+.page-template-template-student-signup footer,
+.page-template-template-student-login header,
+.page-template-template-student-login footer,
+.nscs_user_unregistered header,
+.nscs_user_unregistered footer {
+    display: none;
+}
+
+label {
+    color: #333333;
+    font-weight: 300;
+    font-size: 0.8rem;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+input[type="text"],
+input[type="password"],
+select {
+    height: 2.5rem;
+    line-height: 2.5rem;
+    padding: 0 1rem;
+    width: 100%;
+    border: 1px solid rgba(109, 160, 169, 1);
+    font-weight: 300;
+    font-size: 0.9rem;
+    border-radius: 0.25rem;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border: 1px solid #AC8B3A;
+    color: #AC8B3A;
+    outline: none;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+    color: rgba(109, 160, 169, 0.5);
+}
+
+input[type="submit"],
+.nscs-button {
+    display: inline-block;
+    color: #FFF;
+    background-color: #9E1D25;
+    border: none;
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    padding: 0 1rem;
+    font-size: 0.9rem;
+    font-weight: 800;
+}
+
+input[type="submit"]:hover,
+.nscs-button:hover {
+    color: #FFF;
+    background-color: #AC8B3A;
+}
+
+.input-group {
+    margin-bottom: 2rem;
+}
+
+.input-group:focus-within label {
+    color: #9E1D25;
+}
+
+.shell {
+    position: relative;
+    line-height: 1;
+    display: block;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    width: 100%;
+    font-weight: 300;
+}
+
+.shell span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    color: #ccc;
+    pointer-events: none;
+    z-index: 0;
+    padding: 0 1rem;
+}
+
+.shell span i {
+    font-style: normal;
+    /* any of these 3 will work */
+    color: transparent;
+    opacity: 0;
+    visibility: hidden;
+}
+
+input.masked-styles,
+input.masked,
+.shell span {
+    font-size: 16px;
+    font-family: monospace;
+    padding-right: 10px;
+    background-color: transparent;
+    text-transform: uppercase;
+}
+
+.nscs-amount {
+    color: #9E1D25;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.nscs-amount:after {
+    content: '.00';
+    font-size: .85rem;
+    color: #333333;
+    font-weight: 300;
+}
+
+.StripeElement {
+    background-color: white;
+    height: 40px;
+    padding: 10px 12px;
+    border-radius: 4px;
+    border: 1px solid rgba(109, 160, 169, 1);
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
+}
+
+.StripeElement--focus {
+    box-shadow: 0 1px 3px 0 #cfd7df;
+}
+
+.StripeElement--invalid {
+    border-color: #fa755a;
+}
+
+.StripeElement--webkit-autofill {
+    background-color: #fefde5 !important;
+}
+
+#card-errors {
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    color: red;
+}
+
+/* non globals */
+
+.nscs-auth-container {
+    width: 980px;
+    max-width: 100%;
+    padding: 80px 30px;
+    margin: 0 auto;
+}
+
+.nscs-auth-header__logo {
+    width: 300px;
+    max-width: 100%;
+}
+
+.nscs-auth__constrict {
+    width: 50%;
+}
+
+.nscs-auth-header__title {
+    color: #333333;
+    font-size: 1.5rem;
+    font-weight: 900;
+    padding: 1.5rem 0;
+    max-width: 100%;
+    text-transform: uppercase;
+}
+
+.nscs-auth__bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 55%;
+    height: 75%;
+    background: transparent url('../images/background-sign-up.png') no-repeat bottom left;
+    background-size: cover;
+}
+
+.nscs-auth__bg--registration {
+    position: absolute;
+    top: 10%;
+    width: 50%;
+    height: 50%;
+    background-image: url('../images/background-registration.png');
+    background-size: contain;
+}
+
+.nscs-auth__content {
+    width: 50%;
+}
+
+.nscs-auth__content--registration {
+    width: 100%;
+}
+
+.nscs-auth__message {
+    background: rgba(158, 29, 37, 0.5);
+    color: #FFF;
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+    font-size: 0.8rem;
+}
+
+.nscs-auth__message:empty {
+    padding: 0;
+    margin: 0;
+}
+
+.nscs-auth__registration-step {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.nscs-auth__registration-step--active {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.nscs-auth__amount {
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #CCCCCC;
+    line-height: 1rem;
+}
+
+.nscs-auth__amount:after {
+    display: table;
+    content: '';
+    clear: both;
+}
+
+.nscs-auth__amount .nscs-amount {
+    float: right;
+}
+
+.nscs-auth__cardinfo {
+    margin: 2rem 0;
+    padding: 2rem 2rem 0 2rem;
+    border: 1px solid #CCCCCC;
+}
+
+.nscs-auth__card-security {
+    margin: 0 -0.5rem;
+}
+
+.nscs-auth__card-security .input-group {
+    float: left;
+    width: 50%;
+    padding: 0 0.5rem;
+}
+
+.nscs-auth__card-security:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.nscs-auth__shippinginfo {
+    margin-left: -1rem;
+    margin-right: -1rem;
+}
+
+.nscs-auth__shippinginfo .input-group {
+    float: left;
+    width: 50%;
+    padding: 0 1rem;
+}
+
+@media(max-width: 992px) {
+
+    .nscs-auth-header__title br {
+        display: none;
+    }
+
+    .nscs-auth__content {
+        width: 100%;
+    }
+
+    .nscs-auth__constrict {
+        width: 100%;
+    }
+
+    .nscs-auth__bg {
+        display: none;
+    }
+
+    .nscs-auth__cardinfo {
+        margin: 2rem 0 0 0;
+        padding: 0;
+        border: none;
+    }
+
+}
+
+@media(max-width: 768px) {
+
+    .nscs-auth__shippinginfo .input-group {
+        width: 100%;
+        float: none;
+    }
+
+}

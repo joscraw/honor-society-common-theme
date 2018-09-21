@@ -7,10 +7,14 @@
  */
 define('ACF_EARLY_ACCESS', '5');
 
-
+include( dirname( __FILE__ ) . '/inc/woocommerce-dynamic-payment.php');
+include(dirname(__FILE__) . '/inc/auth.php');
 
 add_action('wp_enqueue_scripts', function()
 {
+
+    wp_enqueue_script( 'nscs-mask', get_theme_file_uri( '/assets/js/mask.js' ), array( 'jquery' ), '2.1.2', true );
+    wp_enqueue_script( 'stripe-v3', 'https://js.stripe.com/v3/', array(), '3.0', true );
     wp_register_script('custom.js', get_template_directory_uri() . '/assets/js/custom.js', array('jquery'), "1.0", true);
     wp_enqueue_script('custom.js');
 
@@ -59,43 +63,43 @@ function redirect_from_events( $query ) {
 
 /* ------------------------------------ START LOGIN LOGIC ------------------------------------*/
 
-/* Main redirection of the default login page */
-function redirect_login_page() {
-    $login_page  = home_url('/login/');
-    $page_viewed = basename($_SERVER['REQUEST_URI']);
-
-    if($page_viewed == "wp-login.php" && $_SERVER['REQUEST_METHOD'] == 'GET') {
-        wp_redirect($login_page);
-        exit;
-    }
-}
-add_action('init','redirect_login_page');
-
-/* Where to go if a login failed */
-function custom_login_failed() {
-    $login_page  = home_url('/login/');
-    wp_redirect($login_page . '?login=failed');
-    exit;
-}
-add_action('wp_login_failed', 'custom_login_failed');
-
-/* Where to go if any of the fields were empty */
-function verify_user_pass($user, $username, $password) {
-    $login_page  = home_url('/login/');
-    if($username == "" || $password == "") {
-        wp_redirect($login_page . "?login=empty");
-        exit;
-    }
-}
-add_filter('authenticate', 'verify_user_pass', 1, 3);
-
-/* What to do on logout */
-function logout_redirect() {
-    $login_page  = home_url('/login/');
-    wp_redirect($login_page . "?login=false");
-    exit;
-}
-add_action('wp_logout','logout_redirect');
+///* Main redirection of the default login page */
+//function redirect_login_page() {
+//    $login_page  = home_url('/login/');
+//    $page_viewed = basename($_SERVER['REQUEST_URI']);
+//
+//    if($page_viewed == "wp-login.php" && $_SERVER['REQUEST_METHOD'] == 'GET') {
+//        wp_redirect($login_page);
+//        exit;
+//    }
+//}
+//add_action('init','redirect_login_page');
+//
+///* Where to go if a login failed */
+//function custom_login_failed() {
+//    $login_page  = home_url('/login/');
+//    wp_redirect($login_page . '?login=failed');
+//    exit;
+//}
+//add_action('wp_login_failed', 'custom_login_failed');
+//
+///* Where to go if any of the fields were empty */
+//function verify_user_pass($user, $username, $password) {
+//    $login_page  = home_url('/login/');
+//    if($username == "" || $password == "") {
+//        wp_redirect($login_page . "?login=empty");
+//        exit;
+//    }
+//}
+//add_filter('authenticate', 'verify_user_pass', 1, 3);
+//
+///* What to do on logout */
+//function logout_redirect() {
+//    $login_page  = home_url('/login/');
+//    wp_redirect($login_page . "?login=false");
+//    exit;
+//}
+//add_action('wp_logout','logout_redirect');
 
 
 /* ------------------------------------ END LOGIN LOGIC ------------------------------------*/
