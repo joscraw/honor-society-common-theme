@@ -1,0 +1,84 @@
+{
+    "key": "group_5bb3e60575854",
+    "title": "Activity Type",
+    "fields": [
+        {
+            "key": "field_5bb3e6abd05ee",
+            "label": "Type",
+            "name": "type",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "--None--": "--None--",
+                "General Body Meeting": "General Body Meeting",
+                "Officer Meeting": "Officer Meeting",
+                "5x5 Recruitment Activity": "5x5 Recruitment Activity",
+                "Community Service Activity": "Community Service Activity",
+                "Advisor Appreciation Week Activity": "Advisor Appreciation Week Activity",
+                "Career Activity": "Career Activity",
+                "Founder's Day Activity": "Founder's Day Activity",
+                "Integrity Week Activity": "Integrity Week Activity",
+                "New Member Induction Ceremony": "New Member Induction Ceremony",
+                "Officer Transition Activity": "Officer Transition Activity",
+                "PACE Assembly": "PACE Assembly",
+                "PACE March to College Day": "PACE March to College Day",
+                "PACE Mentoring Program": "PACE Mentoring Program",
+                "Scholarship Activity": "Scholarship Activity",
+                "Senior Send-Off Celebration": "Senior Send-Off Celebration",
+                "Tabling Activity": "Tabling Activity",
+                "Social Activity": "Social Activity"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5bb3e6bcd05ef",
+            "label": "Other",
+            "name": "other",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "chapter_act_repo"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "Chapter Activity Report",
+    "modified": 1538518166
+}

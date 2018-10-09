@@ -6,7 +6,7 @@
             "key": "field_5b5aa3581a8f4",
             "label": "Officer Information Checked",
             "name": "officer_information_checked",
-            "type": "true_false",
+            "type": "date_picker",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,17 +15,32 @@
                 "class": "",
                 "id": ""
             },
-            "message": "",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
+            "display_format": "m\/d\/Y",
+            "return_format": "m\/d\/Y",
+            "first_day": 1
+        },
+        {
+            "key": "field_5bbaaadbdf883",
+            "label": "Officer Information Checked - 2nd",
+            "name": "officer_information_checked_-_2nd",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "m\/d\/Y",
+            "return_format": "m\/d\/Y",
+            "first_day": 1
         },
         {
             "key": "field_5b5aa3661a8f5",
             "label": "Advisors",
             "name": "advisors",
-            "type": "user",
+            "type": "post_object",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -34,18 +49,20 @@
                 "class": "",
                 "id": ""
             },
-            "role": [
-                "chapter_advisor"
+            "post_type": [
+                "contacts"
             ],
+            "taxonomy": [],
             "allow_null": 0,
             "multiple": 1,
-            "return_format": "array"
+            "return_format": "object",
+            "ui": 1
         },
         {
             "key": "field_5b5aa3821a8f6",
             "label": "Chapter President",
             "name": "chapter_president",
-            "type": "user",
+            "type": "post_object",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -54,18 +71,20 @@
                 "class": "",
                 "id": ""
             },
-            "role": [
-                "chapter_president"
+            "post_type": [
+                "contacts"
             ],
+            "taxonomy": [],
             "allow_null": 0,
-            "multiple": 0,
-            "return_format": "array"
+            "multiple": 1,
+            "return_format": "object",
+            "ui": 1
         },
         {
             "key": "field_5b5aa3961a8f7",
             "label": "Chapter Officers",
             "name": "chapter_officers",
-            "type": "user",
+            "type": "post_object",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -74,12 +93,14 @@
                 "class": "",
                 "id": ""
             },
-            "role": [
-                "chapter_officer"
+            "post_type": [
+                "contacts"
             ],
+            "taxonomy": [],
             "allow_null": 0,
             "multiple": 1,
-            "return_format": "array"
+            "return_format": "object",
+            "ui": 1
         }
     ],
     "location": [
@@ -114,5 +135,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1536113787
+    "modified": 1538960162
 }

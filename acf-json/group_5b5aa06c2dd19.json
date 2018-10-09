@@ -4,26 +4,21 @@
     "fields": [
         {
             "key": "field_5b5aa06d6bb4d",
-            "label": "Control Type",
-            "name": "control_type",
+            "label": "Chapter Invitation Type",
+            "name": "chapter_invitation_type",
             "type": "select",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "25",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "choices": {
                 "Control": "Control",
-                "Control - Email Only": "Control - Email Only",
-                "Label Email & Letter": "Label Email & Letter",
-                "Label-Letter": "Label-Letter",
-                "Label Email": "Label Email",
-                "Online": "Online",
-                "2YR": "2YR",
-                "Self-nom": "Self-nom"
+                "Open Records": "Open Records",
+                "Label": "Label"
             },
             "default_value": [],
             "allow_null": 0,
@@ -35,21 +30,21 @@
         },
         {
             "key": "field_5b5aa1466bb4e",
-            "label": "Open Records Control Type",
-            "name": "open_records_control_type",
+            "label": "Tactic",
+            "name": "tactic",
             "type": "select",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "25",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "choices": {
-                "Control Campaign": "Control Campaign",
-                "Dean's List Campaign": "Dean's List Campaign",
-                "Self-Nom Email": "Self-Nom Email"
+                "Full Campaign": "Full Campaign",
+                "Email Only": "Email Only",
+                "Direct Mail Only": "Direct Mail Only"
             },
             "default_value": [],
             "allow_null": 0,
@@ -68,7 +63,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "25",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
@@ -86,14 +81,31 @@
         },
         {
             "key": "field_5b5aa1786bb50",
-            "label": "Logo Permission \/ Rejection Year",
-            "name": "logo_permission_rejection_year",
+            "label": "Logo Permission Year",
+            "name": "logo_permission_year",
             "type": "date_picker",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "25",
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "Y",
+            "return_format": "Y",
+            "first_day": 1
+        },
+        {
+            "key": "field_5bbaa74848f6e",
+            "label": "Logo Rejection Year",
+            "name": "logo_rejection_year",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
                 "class": "",
                 "id": ""
             },
@@ -110,7 +122,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
@@ -138,7 +150,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "25",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
@@ -150,14 +162,14 @@
         },
         {
             "key": "field_5b5aa1c76bb53",
-            "label": "Letter of Support Included",
-            "name": "letter_of_support_included",
+            "label": "Advisor Willing To Provide Letter",
+            "name": "advisor_willing_to_provide_letter",
             "type": "true_false",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "25",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
@@ -166,6 +178,74 @@
             "ui": 0,
             "ui_on_text": "",
             "ui_off_text": ""
+        },
+        {
+            "key": "field_5bbaa80e3555e",
+            "label": "Invitation Approved",
+            "name": "invitation_approved",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "m\/d\/Y",
+            "return_format": "m\/d\/Y",
+            "first_day": 1
+        },
+        {
+            "key": "field_5b5aa2076bb57",
+            "label": "Invitation Ready to Print",
+            "name": "invitation_ready_to_print",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "m\/d\/Y",
+            "return_format": "m\/d\/Y",
+            "first_day": 1
+        },
+        {
+            "key": "field_5bbaa81c3555f",
+            "label": "Invitation Approved - 2nd",
+            "name": "invitation_approved_-_2nd",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "m\/d\/Y",
+            "return_format": "m\/d\/Y",
+            "first_day": 1
+        },
+        {
+            "key": "field_5bbaa7ff3555d",
+            "label": "Invitation Ready to Print - 2nd",
+            "name": "invitation_ready_to_print_-_2nd",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "m\/d\/Y",
+            "return_format": "m\/d\/Y",
+            "first_day": 1
         },
         {
             "key": "field_5b5aa1e46bb54",
@@ -187,28 +267,9 @@
             "new_lines": ""
         },
         {
-            "key": "field_5b5aa1f26bb55",
-            "label": "Final Notes",
-            "name": "final_notes",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": ""
-        },
-        {
-            "key": "field_5b5aa1fd6bb56",
-            "label": "Test Run",
-            "name": "test_run",
+            "key": "field_5bbaa8c22ea5b",
+            "label": "File Password",
+            "name": "file_password",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -225,10 +286,10 @@
             "maxlength": ""
         },
         {
-            "key": "field_5b5aa2076bb57",
-            "label": "Invitation Ready to Print",
-            "name": "invitation_ready_to_print",
-            "type": "true_false",
+            "key": "field_5b5aa1f26bb55",
+            "label": "Data Description",
+            "name": "data_description",
+            "type": "textarea",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -237,11 +298,30 @@
                 "class": "",
                 "id": ""
             },
-            "message": "",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5bbaa8e42ea5c",
+            "label": "EMI Process",
+            "name": "emi_process",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
         },
         {
             "key": "field_5b5aa21b6bb58",
@@ -314,86 +394,10 @@
             "first_day": 1
         },
         {
-            "key": "field_5b5aa2536bb5c",
-            "label": "Chapter Officer Insert Submitted",
-            "name": "chapter_officer_insert_submitted",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
-        },
-        {
-            "key": "field_5b5aa2656bb5d",
-            "label": "Chapter Insert Officer Names",
-            "name": "chapter_insert_officer_names",
+            "key": "field_5b5aa1fd6bb56",
+            "label": "Test Run",
+            "name": "test_run",
             "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5b5aa27f6bb5e",
-            "label": "Chapter Insert Quote",
-            "name": "chapter_insert_quote",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": ""
-        },
-        {
-            "key": "field_5b5aa2866bb5f",
-            "label": "Chapter Insert Officer Quoted",
-            "name": "chapter_insert_officer_quoted",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5b5aa2946bb60",
-            "label": "MS Team Approved Insert",
-            "name": "ms_team_approved_insert",
-            "type": "true_false",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -402,11 +406,11 @@
                 "class": "",
                 "id": ""
             },
-            "message": "",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -441,5 +445,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1536113607
+    "modified": 1538959910
 }

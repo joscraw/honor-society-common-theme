@@ -1,6 +1,6 @@
 {
     "key": "group_5b589d532bc99",
-    "title": "Membership Information",
+    "title": "Student Information - Membership",
     "fields": [
         {
             "key": "field_5b589d9cb4881",
@@ -162,6 +162,52 @@
             "display_format": "d\/m\/Y",
             "return_format": "d\/m\/Y",
             "first_day": 1
+        },
+        {
+            "key": "field_5bb68b9c3ad56",
+            "label": "Terminated Date",
+            "name": "terminated_date",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "m\/d\/Y",
+            "return_format": "m\/d\/Y",
+            "first_day": 1
+        },
+        {
+            "key": "field_5bb68bb03ad57",
+            "label": "Terminated Reason",
+            "name": "terminated_reason",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "66",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "I need the money for something else": "I need the money for something else",
+                "I don't see the benefit of membership": "I don't see the benefit of membership",
+                "I meant to join another organization": "I meant to join another organization",
+                "I mistakenly made this payment": "I mistakenly made this payment",
+                "I'm unhappy with my experience in NSCS": "I'm unhappy with my experience in NSCS",
+                "Terminated date": "Terminated date"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
         }
     ],
     "location": [
@@ -196,5 +242,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1536113774
+    "modified": 1538766506
 }

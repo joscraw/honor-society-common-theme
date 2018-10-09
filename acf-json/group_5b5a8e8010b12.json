@@ -1,26 +1,7 @@
 {
     "key": "group_5b5a8e8010b12",
-    "title": "Parent Information",
+    "title": "Torch & Laurel - Parent Information",
     "fields": [
-        {
-            "key": "field_5b5a8e82686f5",
-            "label": "Parent Student Contact",
-            "name": "parent_student_contact",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
         {
             "key": "field_5b5a8e8b686f6",
             "label": "Parent Prefix",
@@ -283,5 +264,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1536113794
+    "modified": 1538768911
 }

@@ -1,0 +1,372 @@
+{
+    "key": "group_5baac95ec72b2",
+    "title": "General Information",
+    "fields": [
+        {
+            "key": "field_5baacc649ff9a",
+            "label": "Name",
+            "name": "name",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5baacc6a9ff9b",
+            "label": "Chapter",
+            "name": "chapter",
+            "type": "post_object",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "chapters"
+            ],
+            "taxonomy": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1
+        },
+        {
+            "key": "field_5baacc959ff9c",
+            "label": "Contact",
+            "name": "contact",
+            "type": "post_object",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "contacts"
+            ],
+            "taxonomy": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1
+        },
+        {
+            "key": "field_5baacd599ffa0",
+            "label": "Type",
+            "name": "type",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Officer": "Officer",
+                "Advisor": "Advisor",
+                "Alumni": "Alumni"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5baacd1f9ff9f",
+            "label": "Position",
+            "name": "position",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5baacd599ffa0",
+                        "operator": "==",
+                        "value": "Officer"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Chapter President": "Chapter President",
+                "Chapter Co-President": "Chapter Co-President",
+                "Executive Vice President": "Executive Vice President",
+                "Chapter President-Elect": "Chapter President-Elect",
+                "VP, Social Media": "VP, Social Media",
+                "VP, Public Relations & Recruitment": "VP, Public Relations & Recruitment",
+                "VP, Community Service": "VP, Community Service",
+                "Treasurer": "Treasurer",
+                "Secretary": "Secretary",
+                "Social Chair": "Social Chair",
+                "PACE Chair": "PACE Chair",
+                "STAR Status Coordinator": "STAR Status Coordinator",
+                "Professional Development Chair": "Professional Development Chair",
+                "Fundraising Chair": "Fundraising Chair",
+                "Administrative Vice President": "Administrative Vice President",
+                "Alumni Advisor": "Alumni Advisor",
+                "Alumni Liaison": "Alumni Liaison",
+                "Community College Liaison": "Community College Liaison",
+                "Donations Coordinator": "Donations Coordinator",
+                "Historian": "Historian",
+                "Officer Emeritus": "Officer Emeritus",
+                "Online Chapter Liaison": "Online Chapter Liaison",
+                "Peer Leader": "Peer Leader",
+                "Scholarship Chair": "Scholarship Chair",
+                "Secretary\/Treasurer": "Secretary\/Treasurer",
+                "STAR Coordinator\/Treasurer": "STAR Coordinator\/Treasurer",
+                "Torch & Laurel Liaison": "Torch & Laurel Liaison",
+                "Vice President": "Vice President",
+                "VP, Communications": "VP, Communications",
+                "VP, Events": "VP, Events",
+                "VP, Membership": "VP, Membership",
+                "Public Relations Chair": "Public Relations Chair",
+                "Webmaster": "Webmaster"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5baace709ffa1",
+            "label": "Position",
+            "name": "position",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5baacd599ffa0",
+                        "operator": "==",
+                        "value": "Advisor"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Advisor": "Advisor"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5baacea79ffa2",
+            "label": "Position",
+            "name": "position",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5baacd599ffa0",
+                        "operator": "==",
+                        "value": "Alumni"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Board Chair": "Board Chair",
+                "Board Co-Chair": "Board Co-Chair",
+                "Board Member": "Board Member",
+                "Board Secretary": "Board Secretary",
+                "Regional Coordinator": "Regional Coordinator"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5baaccc29ff9e",
+            "label": "Title",
+            "name": "title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5baaceeae548e",
+            "label": "Founding Officer",
+            "name": "founding_officer",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5baacf13e548f",
+            "label": "Official Email",
+            "name": "official_email",
+            "type": "email",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5baacf1ce5490",
+            "label": "Start Date",
+            "name": "start_date",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "m\/d\/Y",
+            "return_format": "m\/d\/Y",
+            "first_day": 1
+        },
+        {
+            "key": "field_5baacf45e5491",
+            "label": "End Date",
+            "name": "end_date",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "m\/d\/Y",
+            "return_format": "m\/d\/Y",
+            "first_day": 1
+        },
+        {
+            "key": "field_5baacf51e5492",
+            "label": "Chapter Operations Manager",
+            "name": "chapter_operations_manager",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5baacf64e5493",
+            "label": "Chapter Operations Email",
+            "name": "chapter_operations_email",
+            "type": "email",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "chapter_leadership"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "Chapter Leadership",
+    "modified": 1538440322
+}

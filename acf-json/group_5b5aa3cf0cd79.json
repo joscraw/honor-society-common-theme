@@ -1,6 +1,6 @@
 {
     "key": "group_5b5aa3cf0cd79",
-    "title": "Control School Info",
+    "title": "EMI Information",
     "fields": [
         {
             "key": "field_5b5aa3d4a3850",
@@ -88,9 +88,9 @@
         },
         {
             "key": "field_5b5aa41ca3854",
-            "label": "Emails Provided",
-            "name": "emails_provided",
-            "type": "select",
+            "label": "Email Count Pre Dedupe",
+            "name": "email_count_pre_dedupe",
+            "type": "number",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -99,18 +99,13 @@
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "Yes": "Yes",
-                "No": "No",
-                "Directory Lookup": "Directory Lookup"
-            },
-            "default_value": [],
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "return_format": "value",
-            "ajax": 0,
-            "placeholder": ""
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
         },
         {
             "key": "field_5b5aa437a3855",
@@ -164,5 +159,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1536113692
+    "modified": 1538958823
 }

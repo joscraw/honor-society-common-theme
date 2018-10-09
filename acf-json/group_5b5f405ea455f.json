@@ -52,7 +52,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
@@ -63,26 +63,6 @@
             "maxlength": ""
         },
         {
-            "key": "field_5b5f41b1f1ab2",
-            "label": "Owner",
-            "name": "owner",
-            "type": "user",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "role": [
-                "honor_society_admin"
-            ],
-            "allow_null": 0,
-            "multiple": 0,
-            "return_format": "array"
-        },
-        {
             "key": "field_5b5f41c2f1ab3",
             "label": "New Star Status",
             "name": "new_star_status",
@@ -91,11 +71,12 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
             "choices": {
+                "Diamond": "Diamond",
                 "Platinum": "Platinum",
                 "Gold": "Gold",
                 "Silver": "Silver",
@@ -120,7 +101,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
@@ -129,6 +110,26 @@
             "ui": 0,
             "ui_on_text": "",
             "ui_off_text": ""
+        },
+        {
+            "key": "field_5b5f41b1f1ab2",
+            "label": "Owner",
+            "name": "owner",
+            "type": "user",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "role": [
+                "honor_society_admin"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "array"
         }
     ],
     "location": [
@@ -163,5 +164,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1536113672
+    "modified": 1539036966
 }
