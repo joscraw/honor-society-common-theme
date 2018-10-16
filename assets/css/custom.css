@@ -70,6 +70,7 @@ p, span {
 
 .main-nav {
     padding-left: 50px;
+    width: 100%
 }
 
 .main-nav ul {
@@ -96,6 +97,15 @@ p, span {
 .main-nav ul li a:hover {
     color: #9E1D25;
 }
+
+.menu-primary-menu-container {
+    float: left;
+}
+
+.menu-right-primary-menu-container {
+    float: right;
+}
+
 /*************************************************** END MAIN NAV STYLES ***************************************************/
 
 /*************************************************** START MAIN CONTENT STYLES ***************************************************/

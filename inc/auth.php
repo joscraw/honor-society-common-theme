@@ -30,7 +30,8 @@ function nscs_student_signup_middleware(){
 
     $template_basename = basename( get_page_template() );
     $public_templates = array(
-        'template-student-login.php'
+        'template-student-login.php',
+        'template-password-reset.php',
     );
 
     // Do not apply middleware logic on public templates
@@ -43,10 +44,10 @@ function nscs_student_signup_middleware(){
         !is_user_logged_in() &&
         !in_array( $GLOBALS['pagenow'], array( 'wp-login.php', 'wp-register.php' ) ) ) {
 
-        $signup_page = get_page_by_template_filename( 'template-student-signup.php' );
+        $login_page = get_page_by_template_filename( 'template-student-login.php' );
 
-        if( !empty( $signup_page ) ) {
-            wp_redirect( get_permalink( $signup_page[0]->ID ) );
+        if( !empty( $login_page ) ) {
+            wp_redirect( get_permalink( $login_page[0]->ID ) );
             exit;
         }
     }
@@ -72,6 +73,33 @@ function nscs_student_registration_middleware(){
             wp_redirect( get_permalink( $member_portal[0]->ID ) );
             exit;
         }
+    }
+}
+
+add_action('wp_logout','auto_redirect_after_logout');
+function auto_redirect_after_logout(){
+    $login_page = get_page_by_template_filename('template-student-login.php');
+    if( !empty( $login_page ) ) {
+        wp_redirect(get_permalink( $login_page[0]->ID ));
+        exit;
+    }
+}
+
+add_action('login_form_lostpassword', 'redirect_to_custom_password_reset');
+function redirect_to_custom_password_reset() {
+    if ( 'GET' == $_SERVER['REQUEST_METHOD'] ) {
+        if ( is_user_logged_in() ) {
+            $this->redirect_logged_in_user();
+            exit;
+        }
+
+        $password_reset_page = get_page_by_template_filename( 'template-password-reset.php' );
+
+        if( !empty( $password_reset_page ) ) {
+            wp_redirect( get_permalink( $password_reset_page[0]->ID ) );
+            exit;
+        }
+        exit;
     }
 }
 
