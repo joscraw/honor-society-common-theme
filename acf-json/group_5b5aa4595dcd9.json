@@ -297,25 +297,6 @@
             "maxlength": ""
         },
         {
-            "key": "field_5b5aa5125bdab",
-            "label": "School Cannot Mail Certian Dates",
-            "name": "school_cannot_mail_certian_dates",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "33",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
-        },
-        {
             "key": "field_5b5aa51e5bdac",
             "label": "Unavailable to Mail Startdate",
             "name": "unavailable_to_mail_startdate",
@@ -764,5 +745,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1536113752
+    "modified": 1538960003
 }

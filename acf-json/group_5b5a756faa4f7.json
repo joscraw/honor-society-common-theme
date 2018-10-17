@@ -1,6 +1,6 @@
 {
     "key": "group_5b5a756faa4f7",
-    "title": "Undergraduate Tracking Information",
+    "title": "Student Information - Undergraduate Tracking",
     "fields": [
         {
             "key": "field_5b5a75e24c8f7",
@@ -11,7 +11,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -24,32 +24,23 @@
             "step": ""
         },
         {
-            "key": "field_5b5a7eb84c8f8",
-            "label": "Other Honor Societies",
-            "name": "other_honor_societies",
-            "type": "select",
+            "key": "field_5b5a7f814c8fe",
+            "label": "NLC Application Academic Year",
+            "name": "nlc_application_academic_year",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "Alpha Lambda Delta": "Alpha Lambda Delta",
-                "Golden Key International Honor Society": "Golden Key International Honor Society",
-                "National Society of Leadership and Success": "National Society of Leadership and Success",
-                "Phi Theta Kappa": "Phi Theta Kappa",
-                "Society for College Leadership and Achievement": "Society for College Leadership and Achievement"
-            },
-            "default_value": [],
-            "allow_null": 0,
-            "multiple": 1,
-            "ui": 0,
-            "return_format": "value",
-            "ajax": 0,
-            "placeholder": ""
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_5b5a7ee44c8f9",
@@ -88,6 +79,36 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_5b5a7f504c8fd",
+            "label": "Benefits Used at One-Year Check In",
+            "name": "benefits_used_at_one-year_check_in",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Applied for a scholarship": "Applied for a scholarship",
+                "Attended an on-campus event\/activity": "Attended an on-campus event\/activity",
+                "Used a discount": "Used a discount",
+                "Accessed career resources": "Accessed career resources",
+                "Registered for ScholarCon": "Registered for ScholarCon",
+                "Connected with a Potential Employer": "Connected with a Potential Employer",
+                "None so far": "None so far"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
         },
         {
             "key": "field_5b5a7f194c8fb",
@@ -137,155 +158,28 @@
             "new_lines": ""
         },
         {
-            "key": "field_5b5a7f504c8fd",
-            "label": "Benefits Used at One-Year Check In",
-            "name": "benefits_used_at_one-year_check_in",
+            "key": "field_5b5a7eb84c8f8",
+            "label": "Other Honor Societies",
+            "name": "other_honor_societies",
             "type": "select",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "",
                 "class": "",
                 "id": ""
             },
             "choices": {
-                "Applied for a scholarship": "Applied for a scholarship",
-                "Attended an on-campus event\/activity": "Attended an on-campus event\/activity",
-                "Used a discount": "Used a discount",
-                "Accessed career resources": "Accessed career resources",
-                "Registered for ScholarCon": "Registered for ScholarCon",
-                "Connected with a Potential Employer": "Connected with a Potential Employer",
-                "None so far": "None so far"
+                "Alpha Lambda Delta": "Alpha Lambda Delta",
+                "Golden Key International Honor Society": "Golden Key International Honor Society",
+                "National Society of Leadership and Success": "National Society of Leadership and Success",
+                "Phi Theta Kappa": "Phi Theta Kappa",
+                "Society for College Leadership and Achievement": "Society for College Leadership and Achievement"
             },
             "default_value": [],
             "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "return_format": "value",
-            "ajax": 0,
-            "placeholder": ""
-        },
-        {
-            "key": "field_5b5a7f814c8fe",
-            "label": "NLC Application Academic Year",
-            "name": "nlc_application_academic_year",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5b5a7f994c8ff",
-            "label": "Engaged Graduating Seniors",
-            "name": "engaged_graduating_seniors",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
-        },
-        {
-            "key": "field_5b5a7fa04c900",
-            "label": "Attended Senior Send-Off",
-            "name": "attended_senior_send-off",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "Yes": "Yes",
-                "No": "No",
-                "I don't know what senior send-off is": "I don't know what senior send-off is"
-            },
-            "default_value": [],
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "return_format": "value",
-            "ajax": 0,
-            "placeholder": ""
-        },
-        {
-            "key": "field_5b5a7fbf4c901",
-            "label": "Next Steps After Graduation",
-            "name": "next_steps_after_graduation",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "Graduate School": "Graduate School",
-                "Full-Time Job": "Full-Time Job",
-                "Part Time Job": "Part Time Job",
-                "Fellowship\/Grant": "Fellowship\/Grant",
-                "Service Commitment": "Service Commitment",
-                "Other": "Other",
-                "Undecided": "Undecided"
-            },
-            "default_value": [],
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "return_format": "value",
-            "ajax": 0,
-            "placeholder": ""
-        },
-        {
-            "key": "field_5b5a7fe14c902",
-            "label": "Post Graduation Help",
-            "name": "post_graduation_help",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "Connections to Employers": "Connections to Employers",
-                "Career Resources": "Career Resources",
-                "Graduate School Resources": "Graduate School Resources",
-                "Advice on Transitioning from College to Job": "Advice on Transitioning from College to Job",
-                "Budgeting Advice": "Budgeting Advice",
-                "Networking Opportunities": "Networking Opportunities",
-                "Opportunities to Engage with my Chapter": "Opportunities to Engage with my Chapter",
-                "Service Opportunitiy": "Service Opportunitiy"
-            },
-            "default_value": [],
-            "allow_null": 0,
-            "multiple": 0,
+            "multiple": 1,
             "ui": 0,
             "return_format": "value",
             "ajax": 0,
@@ -324,5 +218,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1536113875
+    "modified": 1538768238
 }

@@ -30,7 +30,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
@@ -39,57 +39,158 @@
             "first_day": 1
         },
         {
+            "key": "field_5bba98d48a40e",
+            "label": "Drop Type",
+            "name": "drop_type",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Control": "Control",
+                "Open Record": "Open Record",
+                "Label": "Label"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5bba994b8a40f",
+            "label": "Campaign Type",
+            "name": "campaign_type",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Full Campaign": "Full Campaign",
+                "Direct Mail Only": "Direct Mail Only",
+                "Email Only": "Email Only"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_5b5b9896a4e0a",
-            "label": "Drop Date",
-            "name": "drop_date",
+            "label": "Drop Date - Wave 1",
+            "name": "drop_date_-_wave_1",
             "type": "date_picker",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
-            "display_format": "d\/m\/Y",
-            "return_format": "d\/m\/Y",
+            "display_format": "m\/d\/Y",
+            "return_format": "m\/d\/Y",
+            "first_day": 1
+        },
+        {
+            "key": "field_5bba99fb322e7",
+            "label": "Drop Date - Wave 2",
+            "name": "drop_date_-_wave_2",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "m\/d\/Y",
+            "return_format": "m\/d\/Y",
+            "first_day": 1
+        },
+        {
+            "key": "field_5bba9a09322e9",
+            "label": "Drop Date - Wave 3",
+            "name": "drop_date_-_wave_3",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "m\/d\/Y",
+            "return_format": "m\/d\/Y",
             "first_day": 1
         },
         {
             "key": "field_5b5b98b4a4e0b",
-            "label": "Due Date",
-            "name": "due_date",
+            "label": "Deadline - Wave 1",
+            "name": "deadline_-_wave_1",
             "type": "date_picker",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
-            "display_format": "d\/m\/Y",
-            "return_format": "d\/m\/Y",
+            "display_format": "m\/d\/Y",
+            "return_format": "m\/d\/Y",
             "first_day": 1
         },
         {
-            "key": "field_5b5b98c1a4e0c",
-            "label": "Due Day",
-            "name": "due_day",
-            "type": "text",
+            "key": "field_5bba9a05322e8",
+            "label": "Deadline - Wave 2",
+            "name": "deadline_-_wave_2",
+            "type": "date_picker",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "display_format": "m\/d\/Y",
+            "return_format": "m\/d\/Y",
+            "first_day": 1
+        },
+        {
+            "key": "field_5bba9a0f322ea",
+            "label": "Deadline - Wave 3",
+            "name": "deadline_-_wave_3",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "m\/d\/Y",
+            "return_format": "m\/d\/Y",
+            "first_day": 1
         },
         {
             "key": "field_5b5b990082543",
@@ -145,6 +246,6 @@
         "send-trackbacks"
     ],
     "active": 1,
-    "description": "",
-    "modified": 1536113581
+    "description": "Drop",
+    "modified": 1538955984
 }

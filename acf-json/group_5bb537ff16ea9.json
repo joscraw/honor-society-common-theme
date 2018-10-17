@@ -1,0 +1,153 @@
+{
+    "key": "group_5bb537ff16ea9",
+    "title": "Partnership Components",
+    "fields": [
+        {
+            "key": "field_5bb538a28b7c7",
+            "label": "Active Partnership Components",
+            "name": "active_partnership_components",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Discount For Members": "Discount For Members",
+                "Email Blast": "Email Blast",
+                "Scholarship Sponsorship": "Scholarship Sponsorship",
+                "Service Offer To Members": "Service Offer To Members",
+                "Campus Visits": "Campus Visits",
+                "Event Sponsorship": "Event Sponsorship",
+                "Scholar Connection": "Scholar Connection",
+                "Alumni Connection": "Alumni Connection",
+                "Blog": "Blog",
+                "Social Media": "Social Media",
+                "Other": "Other"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 1,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5bb5385f8b7c6",
+            "label": "Description",
+            "name": "description",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5bb539098b7c8",
+            "label": "Goals & Metrics",
+            "name": "goals_&_metrics",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5bb539398b7c9",
+            "label": "Rev Share",
+            "name": "rev_share",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5bb5394b8b7ca",
+            "label": "Valuable Discount For Members",
+            "name": "valuable_discount_for_members",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5bb5395c8b7cb",
+            "label": "Significant Marketing Fee",
+            "name": "significant_marketing_fee",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "partner_account"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "Partner Account",
+    "modified": 1538603894
+}

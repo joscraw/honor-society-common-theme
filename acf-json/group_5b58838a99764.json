@@ -11,7 +11,64 @@
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5bb67f2055799",
+            "label": "First Name",
+            "name": "first_name",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5bb67f505579b",
+            "label": "Last Name",
+            "name": "last_name",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5bb67f575579c",
+            "label": "Suffix",
+            "name": "suffix",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
                 "class": "",
                 "id": ""
             },
@@ -40,22 +97,26 @@
             "append": ""
         },
         {
-            "key": "field_5b5883b62b977",
-            "label": "School Email",
-            "name": "school_email",
-            "type": "email",
+            "key": "field_5b589a82ec561",
+            "label": "Account Name",
+            "name": "account_name",
+            "type": "post_object",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "50",
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "post_type": [
+                "chapters"
+            ],
+            "taxonomy": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1
         },
         {
             "key": "field_5b5883c32b978",
@@ -96,90 +157,6 @@
             "maxlength": ""
         },
         {
-            "key": "field_5b5883db2b97a",
-            "label": "Gifted Hire Profile",
-            "name": "gifted_hire_profile",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "33",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "None": "None",
-                "Classic": "Classic",
-                "Launch": "Launch"
-            },
-            "default_value": [],
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "return_format": "value",
-            "ajax": 0,
-            "placeholder": ""
-        },
-        {
-            "key": "field_5b5883ff2b97b",
-            "label": "Bounced",
-            "name": "bounced",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "33",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
-        },
-        {
-            "key": "field_5b58845794034",
-            "label": "Ticket Mailing Test ID",
-            "name": "ticket_mailing_test_id",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "33",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5b58846794035",
-            "label": "Contact Owner",
-            "name": "contact_owner",
-            "type": "user",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "33",
-                "class": "",
-                "id": ""
-            },
-            "role": [
-                "administrator"
-            ],
-            "allow_null": 0,
-            "multiple": 0,
-            "return_format": "array"
-        },
-        {
             "key": "field_5b5899bcec55e",
             "label": "Contact Record Type",
             "name": "contact_record_type",
@@ -188,52 +165,20 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "33",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "choices": {
-                "New Advisor": "New Advisor",
-                "New Campus Offical Contact": "New Campus Offical Contact",
-                "New NSCS member": "New NSCS member",
-                "New Portal Users": "New Portal Users",
-                "New ScholarCon Registrant": "New ScholarCon Registrant",
-                "New T&L Scholar": "New T&L Scholar",
-                "New TN2M Blogger": "New TN2M Blogger",
-                "Partner Contact": "Partner Contact",
-                "StayClassy": "StayClassy",
-                "T&L Guidence Counselor": "T&L Guidence Counselor"
-            },
-            "default_value": [],
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "return_format": "value",
-            "ajax": 0,
-            "placeholder": ""
-        },
-        {
-            "key": "field_5b589a05ec55f",
-            "label": "Contact Type",
-            "name": "contact_type",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "33",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "Prospect": "Prospect",
-                "Member": "Member",
                 "Advisor": "Advisor",
-                "Parent": "Parent",
-                "Sales Contact": "Sales Contact",
-                "T&L Prospect": "T&L Prospect",
+                "Campus Official": "Campus Official",
+                "Campus Contact": "Campus Contact",
                 "T&L Scholar": "T&L Scholar",
-                "Other Honor Society Member": "Other Honor Society Member",
+                "T&L Prospect": "T&L Prospect",
+                "NSCS Prospect": "NSCS Prospect",
+                "NSCS Member": "NSCS Member",
+                "NSCS Alumni": "NSCS Alumni",
+                "Partner Contact": "Partner Contact",
                 "Other": "Other"
             },
             "default_value": [],
@@ -245,84 +190,6 @@
             "placeholder": ""
         },
         {
-            "key": "field_5b589a30ec560",
-            "label": "Other Contact Type",
-            "name": "other_contact_type",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5b589a05ec55f",
-                        "operator": "==",
-                        "value": "Other"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "Distinguished Member": "Distinguished Member",
-                "Event Prospect": "Event Prospect",
-                "Other Honor Society Member": "Other Honor Society Member",
-                "Partner Contact": "Partner Contact",
-                "Register\/EMI Contact": "Register\/EMI Contact",
-                "University President": "University President"
-            },
-            "default_value": [],
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "return_format": "value",
-            "ajax": 0,
-            "placeholder": ""
-        },
-        {
-            "key": "field_5b589a82ec561",
-            "label": "Account Name",
-            "name": "account_name",
-            "type": "post_object",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "post_type": [
-                "chapters"
-            ],
-            "taxonomy": [],
-            "allow_null": 0,
-            "multiple": 0,
-            "return_format": "object",
-            "ui": 1
-        },
-        {
-            "key": "field_5b589b251bce9",
-            "label": "NWChapter",
-            "name": "nwchapter",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
             "key": "field_5b589b381bcea",
             "label": "Portal User",
             "name": "portal_user",
@@ -331,7 +198,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "67",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -341,15 +208,15 @@
             "return_format": "array"
         },
         {
-            "key": "field_5b589be71bcef",
-            "label": "Requires Portal Role Update",
-            "name": "requires_portal_role_update",
+            "key": "field_5bb685cd02022",
+            "label": "Super Friend Of NSCS",
+            "name": "super_friend_of_nscs",
             "type": "true_false",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "33",
+                "width": "",
                 "class": "",
                 "id": ""
             },
@@ -358,91 +225,6 @@
             "ui": 0,
             "ui_on_text": "",
             "ui_off_text": ""
-        },
-        {
-            "key": "field_5b589b991bceb",
-            "label": "Terminated Reason",
-            "name": "terminated_reason",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "67",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "I need the money for something else": "I need the money for something else",
-                "I don't see the benefits of membership": "I don't see the benefits of membership",
-                "I meant to join another organization": "I meant to join another organization",
-                "I mistakenly made this payment": "I mistakenly made this payment",
-                "I'm unhappy in my experience with NSCS": "I'm unhappy in my experience with NSCS"
-            },
-            "default_value": [],
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "return_format": "value",
-            "ajax": 0,
-            "placeholder": ""
-        },
-        {
-            "key": "field_5b589bbd1bcec",
-            "label": "Terminated Date",
-            "name": "terminated_date",
-            "type": "date_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "33",
-                "class": "",
-                "id": ""
-            },
-            "display_format": "d\/m\/Y",
-            "return_format": "d\/m\/Y",
-            "first_day": 1
-        },
-        {
-            "key": "field_5b589bce1bced",
-            "label": "Email Unique",
-            "name": "email_unique",
-            "type": "email",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_5b60052299219",
-            "label": "Chapter Invitation",
-            "name": "chapter_invitation",
-            "type": "post_object",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "post_type": [
-                "chapters_invitations"
-            ],
-            "taxonomy": [],
-            "allow_null": 0,
-            "multiple": 0,
-            "return_format": "object",
-            "ui": 1
         }
     ],
     "location": [
@@ -476,6 +258,6 @@
         "send-trackbacks"
     ],
     "active": 1,
-    "description": "",
-    "modified": 1536113576
+    "description": "Contact",
+    "modified": 1538688517
 }

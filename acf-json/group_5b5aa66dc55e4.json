@@ -79,44 +79,6 @@
             "ui_off_text": ""
         },
         {
-            "key": "field_5b5aa6a70e3f8",
-            "label": "Permission to Invite Eligible Students",
-            "name": "permission_to_invite_eligible_students",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
-        },
-        {
-            "key": "field_5b5aa6d00e3fa",
-            "label": "Permission to Use Signature",
-            "name": "permission_to_use_signature",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
-        },
-        {
             "key": "field_5b5aa6dd0e3fb",
             "label": "Send Copy of Invitation to Advisor?",
             "name": "send_copy_of_invitation_to_advisor",
@@ -265,5 +227,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1536113596
+    "modified": 1538959127
 }

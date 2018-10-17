@@ -3,24 +3,6 @@
     "title": "System information",
     "fields": [
         {
-            "key": "field_5b5aa7a8f27c0",
-            "label": "Created by",
-            "name": "created_by",
-            "type": "user",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "role": "",
-            "allow_null": 0,
-            "multiple": 0,
-            "return_format": "array"
-        },
-        {
             "key": "field_5b5aa7fdf27c4",
             "label": "Last Modified",
             "name": "last_modified",
@@ -201,5 +183,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1536113838
+    "modified": 1538960233
 }

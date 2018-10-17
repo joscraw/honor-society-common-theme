@@ -1,0 +1,46 @@
+{
+    "key": "group_5bb7c4e79037f",
+    "title": "Chapter Leadership",
+    "fields": [
+        {
+            "key": "field_5bb7c4ecb7c02",
+            "label": "Chapter Leadership",
+            "name": "chapter_leadership",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "chapter_leadership"
+            ],
+            "taxonomy": [],
+            "allow_null": 0,
+            "multiple": 1,
+            "return_format": "object",
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "contacts"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "Contact",
+    "modified": 1538770182
+}

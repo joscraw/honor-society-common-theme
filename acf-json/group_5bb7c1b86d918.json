@@ -1,0 +1,155 @@
+{
+    "key": "group_5bb7c1b86d918",
+    "title": "Campus And Partner Contacts",
+    "fields": [
+        {
+            "key": "field_5bb7c1c1a1007",
+            "label": "Title",
+            "name": "title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5bb7c1cca1008",
+            "label": "Degree",
+            "name": "degree",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5bb7c1d8a1009",
+            "label": "Position",
+            "name": "position",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "President": "President",
+                "Chancellor": "Chancellor",
+                "Provost": "Provost",
+                "Dean Of Students": "Dean Of Students",
+                "Student Affairs": "Student Affairs",
+                "Dean Of College": "Dean Of College",
+                "Honors Program": "Honors Program",
+                "Communications": "Communications",
+                "Scholarships": "Scholarships",
+                "Admissions": "Admissions",
+                "Campus Rep To Receive NSCS Mail": "Campus Rep To Receive NSCS Mail",
+                "Career Center": "Career Center",
+                "Community Service Office Contact": "Community Service Office Contact",
+                "Fellowship Office Contact": "Fellowship Office Contact",
+                "Study Abroad Office Contact": "Study Abroad Office Contact",
+                "EMI Contact": "EMI Contact",
+                "Registrar": "Registrar"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5bb7c30390654",
+            "label": "Start Date",
+            "name": "start_date",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "m\/d\/Y",
+            "return_format": "m\/d\/Y",
+            "first_day": 1
+        },
+        {
+            "key": "field_5bb7c31090655",
+            "label": "End Date",
+            "name": "end_date",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "m\/d\/Y",
+            "return_format": "m\/d\/Y",
+            "first_day": 1
+        },
+        {
+            "key": "field_5bb7c7a4e8938",
+            "label": "Advisor Awards FY",
+            "name": "advisor_awards_fy",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "contacts"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "Contact",
+    "modified": 1538770883
+}

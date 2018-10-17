@@ -30,6 +30,14 @@ get_header(); ?>
                 </div>
 
                 <div class="input-group">
+                    <p>Not Registered? <a href="/sign-up">Sign Up Here.</a></p>
+                </div>
+
+                <div class="input-group">
+                    <p><a href="/password-reset">Reset Password</a></p>
+                </div>
+
+                <div class="input-group">
                     <input type="submit" value="Login">
                 </div>
 

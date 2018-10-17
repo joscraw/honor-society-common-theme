@@ -33,10 +33,10 @@ function nscs_student_signup_middleware(){
     // Force users to sign up page if page is protected
     if ( get_post_meta( $post->ID, '_page-protected', true ) === "yes" && !is_user_logged_in() ) {
 
-        $signup_page = get_page_by_template_filename( 'template-student-signup.php' );
+        $login_page = get_page_by_template_filename( 'template-student-login.php' );
 
-        if( !empty( $signup_page ) ) {
-            wp_redirect( get_permalink( $signup_page[0]->ID ) );
+        if( !empty( $login_page ) ) {
+            wp_redirect( get_permalink( $login_page[0]->ID ) );
             exit;
         }
     }

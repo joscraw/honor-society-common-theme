@@ -1,6 +1,6 @@
 {
     "key": "group_5b5a9b35d9838",
-    "title": "Member Relations",
+    "title": "Student Information - Member Relations",
     "fields": [
         {
             "key": "field_5b5a9b3c682e6",
@@ -109,5 +109,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1536113768
+    "modified": 1538689860
 }
