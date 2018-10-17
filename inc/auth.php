@@ -28,20 +28,10 @@ function get_permalink_by_template_filename( $filename ) {
 add_action( 'template_redirect', 'nscs_student_signup_middleware', 1 );
 function nscs_student_signup_middleware(){
 
-    $template_basename = basename( get_page_template() );
-    $public_templates = array(
-        'template-student-login.php'
-    );
+    global $post;
 
-    // Do not apply middleware logic on public templates
-    if( in_array( $template_basename, $public_templates ) ) {
-        return;
-    }
-
-    // Force users to sign up page if they are not logged in
-    if ( $template_basename !== "template-student-signup.php" &&
-        !is_user_logged_in() &&
-        !in_array( $GLOBALS['pagenow'], array( 'wp-login.php', 'wp-register.php' ) ) ) {
+    // Force users to sign up page if page is protected
+    if ( get_post_meta( $post->ID, '_page-protected', true ) === "yes" && !is_user_logged_in() ) {
 
         $signup_page = get_page_by_template_filename( 'template-student-signup.php' );
 
@@ -62,9 +52,9 @@ function nscs_student_registration_middleware(){
     $template_basename = basename( get_page_template() );
 
     if ( $template_basename !== "template-member-portal.php" &&
-        0 !== $current_user->ID &&
+        is_user_logged_in() &&
         !current_user_can('administrator') &&
-        get_user_meta($current_user->ID, 'registered', true) !== 1 ) {
+        get_user_meta($current_user->ID, 'registered', true) !== "1" ) {
 
         $member_portal = get_page_by_template_filename( 'template-member-portal.php' );
 
@@ -152,11 +142,13 @@ function nscs_ajax_login() {
 
     $user_signon = wp_signon( $info, false );
 
-    echo json_encode( array(
-        'loggedin' => !is_wp_error( $user_signon )
-    ));
+    if ( is_wp_error( $user_signon ) ) {
+        die( json_encode( array(
+            'error' => $user_signon->get_error_message()
+        )));
+    }
 
-    die();
+    die('{}');
 }
 add_action('wp_ajax_student_login', 'nscs_ajax_login');
 add_action('wp_ajax_nopriv_student_login', 'nscs_ajax_login');

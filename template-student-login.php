@@ -26,9 +26,7 @@ get_header(); ?>
 
                 <div class="input-group">
                     <label for="last_name">Enter password</label>
-                    <input type="password" name="password" id="password" placeholder="********" required
-                        pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" 
-                        title="Password must be at least 8 characters and contain an uppercase, lowercase, number, and special character.">
+                    <input type="password" name="password" id="password" placeholder="********" required>
                 </div>
 
                 <div class="input-group">

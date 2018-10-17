@@ -52,6 +52,11 @@ p, span {
     right: 0;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+}
+
 
 /*************************************************** END UITLS ***************************************************/
 
@@ -290,6 +295,8 @@ input[type="submit"]:hover,
 .nscs-button:hover {
     color: #FFF;
     background-color: #AC8B3A;
+    cursor: pointer;
+    cursor: hand;
 }
 
 .input-group {
@@ -436,10 +443,14 @@ input.masked,
 
 .nscs-auth__message {
     background: rgba(158, 29, 37, 0.5);
-    color: #FFF;
-    padding: 0.5rem;
+    color: #333;
+    padding: 1rem;
     margin-bottom: 2rem;
     font-size: 0.8rem;
+}
+
+.nscs-auth__message a {
+    color: #000;
 }
 
 .nscs-auth__message:empty {
@@ -505,6 +516,115 @@ input.masked,
     float: left;
     width: 50%;
     padding: 0 1rem;
+}
+
+.nscs-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #5D1014;
+    z-index: 10000;
+    overflow: auto;
+}
+
+.nscs-overlay__inner {
+    width: 980px;
+    max-width: 100%;
+    padding: 40px;
+    margin: 80px auto;
+    background: #FFF;
+}
+
+.nscs-overlay__title {
+    margin-top: 0;
+}
+
+.nscs-products {
+    margin: 3rem -1rem;
+}
+
+.nscs-products:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.nscs-product {
+    float: left;
+    width: 33%;
+    padding: 0 1rem;
+}
+
+.nscs-product__inner {
+    border: 1px solid #AC8B3A;
+    border-radius: 0.5rem 0.5rem 0 0;
+    background: #FFF;
+    width: 100%;
+    overflow: hidden;
+}
+
+.nscs-product__image {
+    margin: 0 auto;
+    padding-top: 80%;
+    background-color: #FFF;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    border: 20px solid #FFF;
+}
+
+.nscs-product__meta {
+    padding: 0.75rem 1rem;
+    border-top: 1px solid #AC8B3A;
+    line-height: 1rem;
+    font-size: .90rem;
+}
+
+.nscs-product__meta:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.nscs-product__meta .nscs-amount {
+    float: right;
+    padding-left: 1rem;
+}
+
+.nscs-product .nscs-button {
+    width: 100%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    text-align: center;
+    background-color: #AC8B3A;
+}
+
+.nscs-product .nscs-button:before {
+    content: '+ ADD TO ORDER';
+    display: inline-block;
+}
+
+.nscs-product .nscs-button--active:before {
+    content: 'ADDED';
+    display: inline-block;
+}
+
+.nscs-product .nscs-button--active,
+.nscs-product .nscs-button:hover {
+    background-color: #6DA0A9;
+}
+
+.nscs-cart-total {
+    text-align: right;
+}
+
+.nscs-cart-total__total,
+.nscs-cart-total__amount,
+.nscs-cart-total__checkout {
+    display: inline-block;
+    margin: 0 0 0 1rem;
 }
 
 @media(max-width: 992px) {

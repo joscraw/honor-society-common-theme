@@ -3,7 +3,18 @@
  * WooCommerce Process Dynamic Order
  * Requires Plugins: WooCommerce & WooCommerce Stripe API
  */
+
+define('NSCS_WOOCOMMERCE_ACTIVE', class_exists('WC_Stripe_Customer') );
+define('NSCS_WOOSTRIPE_ACTIVE', class_exists('WC_Gateway_Stripe') );
+
 function nscs_woocommerce_dynamic_order( $customer_id, $shipping_information, $products ) {
+
+    if ( !NSCS_WOOCOMMERCE_ACTIVE || !NSCS_WOOSTRIPE_ACTIVE ) {
+        return array(
+            "success" => false,
+            "message" => "We are having issues with our payment vendor. Please contact support."
+        );
+    }
 
     $customer_id = $customer_id ?: get_current_user_id();
 
@@ -127,8 +138,6 @@ function nscs_woocommerce_create_order( $user_id, $products, $shipping_address )
     if ( $processing_order = get_user_meta( $user_id, '_stripe_order_processing' ) ) {
         return $processing_order;
     }
-
-    $user = get_user_by( 'id', $user_id );
 
     $shipping_address = array_merge(array(
         'first_name' => "Valued",

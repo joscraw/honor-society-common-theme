@@ -221,7 +221,7 @@
                                         data = JSON.parse(data);
 
                                         if( !!data.success ) {
-                                            location.reload( true );
+                                            location.reload( "<?php echo get_bloginfo('url') ?>/?extras=true" );
                                         } else {
                                             $('.nscs-auth__message').html(data.message);
                                         }

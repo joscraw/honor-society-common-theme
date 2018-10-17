@@ -1,3 +1,9 @@
+<?php
+    if ( key_exists("extras", $_REQUEST ) && get_field('purchase_upgrades') ) {
+        get_template_part('partials/content', 'upcharge' );
+    }
+?>
+
 <div class="main-content">
 
     <div class="top-content">

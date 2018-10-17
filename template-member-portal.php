@@ -3,8 +3,11 @@
  * Template Name: Member Portal
  **/
 
+    // update_user_meta( $current_user->ID, 'registered', 0 );
+
     if( !is_user_logged_in() ) {
-        die();
+        nscs_student_signup_middleware();
+        die("Oops, something went wrong. Please contact support.");
     }
 
     get_header();
@@ -18,5 +21,3 @@
     }
 
     get_footer();
-
-?>
