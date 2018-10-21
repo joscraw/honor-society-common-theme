@@ -33,7 +33,8 @@
                 "Scholarship Activity": "Scholarship Activity",
                 "Senior Send-Off Celebration": "Senior Send-Off Celebration",
                 "Tabling Activity": "Tabling Activity",
-                "Social Activity": "Social Activity"
+                "Social Activity": "Social Activity",
+                "Other": "Other"
             },
             "default_value": [],
             "allow_null": 0,
@@ -50,7 +51,15 @@
             "type": "text",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5bb3e6abd05ee",
+                        "operator": "==",
+                        "value": "Other"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "50",
                 "class": "",
@@ -80,5 +89,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Chapter Activity Report",
-    "modified": 1538518166
+    "modified": 1540139076
 }

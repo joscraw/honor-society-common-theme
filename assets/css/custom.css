@@ -167,7 +167,7 @@ img {
     margin-bottom: 20px;
 }
 
-.bottom-content .tab {
+.tab {
     cursor: pointer;
     height: 100px;
     box-sizing: border-box;
@@ -180,7 +180,7 @@ img {
 
 }
 
-.bottom-content .tab a {
+.tab a {
     color: #FFF;
     text-decoration: none;
     cursor: pointer;
@@ -191,7 +191,7 @@ img {
     width: 100%;
 }
 
-.bottom-content .tab a span {
+.tab a span {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -199,14 +199,14 @@ img {
     font-family: avenir, 'sans-serif';
 }
 
-.bottom-content .tab .tab-text {
+.tab .tab-text {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.bottom-content .tab .tab-icon {
+.tab .tab-icon {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -263,7 +263,7 @@ label {
 
 input[type="text"],
 input[type="password"],
-select {
+select, textarea {
     height: 2.5rem;
     line-height: 2.5rem;
     padding: 0 1rem;
@@ -272,6 +272,11 @@ select {
     font-weight: 300;
     font-size: 0.9rem;
     border-radius: 0.25rem;
+}
+
+textarea {
+    height: 20.0rem;
+    line-height: 1.5rem;
 }
 
 input[type="text"]:focus,
@@ -287,7 +292,7 @@ input[type="password"]::placeholder {
 }
 
 input[type="submit"],
-.nscs-button {
+.nscs-button, .nscs-chapter-update__button {
     display: inline-block;
     color: #FFF;
     background-color: #9E1D25;
@@ -671,3 +676,41 @@ input.masked,
     }
 
 }
+
+/* start chapter update */
+.nscs-hq__container {
+    width: 980px;
+    max-width: 100%;
+    padding: 80px 30px;
+    margin: 0 auto;
+}
+
+.nscs-hq__main {
+    width: 70%;
+}
+
+.nscs-chapter-update__button {
+    width: 100%;
+}
+
+.nscs-hq__container .tab {
+    background-color: #9E1D25;
+    height: 60px;
+    border-radius: 2px;
+    width:100%;
+}
+
+.nscs-hq__container .tab a {
+    line-height: 60px;
+}
+/* end chapter update */
+
+
+/* start chapter activity report */
+.hide {
+    display: none;
+}
+.active {
+    display: block;
+}
+/* end chapter activity report */

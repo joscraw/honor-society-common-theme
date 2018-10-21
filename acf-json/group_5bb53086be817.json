@@ -15,6 +15,9 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "administrator"
+            ],
             "post_type": [
                 "chapters"
             ],
@@ -37,6 +40,9 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "administrator"
+            ],
             "post_type": [
                 "contacts"
             ],
@@ -184,5 +190,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Chapter Update",
-    "modified": 1538601322
+    "modified": 1540156759
 }
