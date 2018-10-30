@@ -1,221 +1,54 @@
-/*************************************************** START EVENTS LIST STYLES ***************************************************/
+/* -------------------------------- START SINGLE PAGE -------------------------------- */
 
-/* --- START COLORS http://chir.ag/projects/name-that-color --- */
-
-.white {
-    color: #FFFFFF;
+.tribe-events-tickets-rsvp {
+    width: 100%;
 }
 
-.mine-shaft {
-    color: #383838;
-}
-
-.dove-gray {
-    color: #666666;
-}
-
-.dove-gray-blend {
-    color: #D5D5D5;
-}
-
-.old-brick {
-    color: #9E1D25;
-}
-.gothic {
+.tribe-events-back a,
+.tribe-events-nav-previous a,
+.tribe-events-nav-next a,
+.tribe-venue a,
+.tribe-events-address a,
+.tribe-back a,
+.user-details a,
+.tribe-link-view-attendee a,
+.tribe-events-list-event-title a,
+.tribe-events-venue-details a,
+.tribe-events-list-event-description a {
     color: #6DA0A9;
 }
 
-.luxor-gold {
-    color: #AC8B3A;
+.tribe-rsvp-message-success {
+    background-color: #6DA0A9 !important;
+    border: none !important;
+    color: #FFFFFF !important;
+    padding: 9px 12px !important;
 }
 
-.cornflower-blue {
-    color: #6195ED;
+/* -------------------------------- END SINGLE PAGE -------------------------------- */
+
+/* -------------------------------- START LIST PAGE -------------------------------- */
+.list-event-rsvp .tribe-button,
+.tribe-events-event-cost .tribe-button,
+.tribe-bar-submit .tribe-events-button,
+.tribe-events-ical.tribe-events-button,
+.tribe-events-cal-links .tribe-events-button,
+.add-to-cart .tribe-button.tribe-button--rsvp {
+    color: #FFFFFF !important;
+    background-color: #9E1D25 !important;
+    cursor: pointer !important;
 }
-/* --- END COLORS http://chir.ag/projects/name-that-color --- */
 
-
-/*
-div, p {
-    padding: 10px;
-}
-
-
-*/
-
-
-
-
-.list-event-container {
+.tribe-events-loop {
     display: flex;
-    flex-wrap: wrap;
+    max-width: 1200px !important;
 }
 
-.tribe-events-title-bar {
-    display: flex;
-    align-items: center;
-    padding-top: 20px;
+.tribe-events-first {
+    padding-top: 0 !important;
 }
 
-.calendar-icon-container {
-    padding-right: 20px;
+.tribe-events-loop .single-event-container {
+    width: 50%;
 }
-
-.single-event-nav-previous a, .single-event-nav-next a, .tribe-events-nav-previous a, .tribe-events-nav-next a {
-    color: #6DA0A9;
-}
-
-.single-event-nav-previous {
-    float: left !important;
-}
-
-.single-event-nav-next {
-    float: right !important;
-}
-
-.list-event {
-    border-top: 1px solid #D7E5E8;
-    border-bottom: 1px solid #D7E5E8;
-    box-sizing: border-box;
-    padding: 50px 20px 50px 0;
-    flex: 50%;
-}
-
-.list-event:nth-child(2) {
-    border-right: none;
-    border-left: 1px solid #D7E5E8;
-    padding-left: 20px;
-}
-
-
-.tribe-events-page-title {
-    text-align: left;
-    color: #383838;
-}
-
-.list-event-title h3 {
-    font-size: 21px;
-}
-
-.list-event-header {
-    display: flex;
-}
-
-.list-event-title {
-    width: 70%;
-}
-
-.list-event-title h3 a {
-    color: #383838;
-}
-
-.list-event-rsvp {
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.list-event-rsvp .tribe-button {
-    color: #FFFFFF;
-    border: 1px solid #666666;
-    background-color: #9E1D25;
-    cursor: pointer;
-    float: right;
-}
-
-.list-event-rsvp .ticket-cost {
-    display: none;
-}
-.list-event-rsvp .tribe-tickets-left {
-    display: none;
-}
-
-.list-event-description p {
-    color: #666666;
-    font-size: 14px;
-}
-
-.list-event-footer {
-    display: flex;
-}
-
-.list-event-location {
-    width: 33%;
-    color: #6DA0A9;
-}
-
-.list-event-date {
-    width: 33%;
-    color: #6DA0A9;
-}
-
-.list-event-time {
-    width: 33%;
-    color: #6DA0A9;
-}
-
-/*************************************************** END EVENTS LIST STYLES ***************************************************/
-
-/*************************************************** START EVENT SINGLE PAGE STYLES ***************************************************/
-
-.single-event-header {
-    margin-top: 20px;
-}
-
-.tribe-events-single {
-    display: flex;
-}
-
-.single-event-map {
-    width: 80%;
-}
-
-.single-event-left-column {
-    width: 70%;
-}
-
-.single-event-right-column {
-    width: 30%;
-}
-
-.tribe-button--rsvp {
-    background-color: #6DA0A9;
-    color: #FFFFFF;
-    padding: 9px 12px;
-}
-
-.tribe-button--no-rsvp {
-    border-radius: 3px;
-    line-height: 1;
-    margin: 10px;
-    padding: 9px 12px;
-    background-color: #9E1D25;
-    color: #FFFFFF;
-}
-
-.tribe-tickets-order_status-row {
-    display: none;
-}
-
-.tribe-link-view-attendee a, .tribe-mini-calendar-event a {
-    color: #6DA0A9;
-}
-
-.single-event-description p {
-    color: #666666;
-}
-
-.tribe-events-single-event-title {
-    color: #383838;
-}
-
-.single-event-time span {
-    color: #383838;
-    font-size: 21px;
-    font-weight: bold;
-    font-family: avenir, 'sans-serif';
-}
-
-
-/*************************************************** END EVENT SINGLE PAGE STYLES ***************************************************/
+/* -------------------------------- END LIST PAGE -------------------------------- */

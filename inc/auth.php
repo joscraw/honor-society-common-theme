@@ -24,14 +24,14 @@ function get_permalink_by_template_filename( $filename ) {
 
 /*
  * Intercept students to the sign up page
+ * @todo not working on non post pages like /events/list
 */
 add_action( 'template_redirect', 'nscs_student_signup_middleware', 1 );
 function nscs_student_signup_middleware(){
 
     global $post;
-
     // Force users to sign up page if page is protected
-    if ( get_post_meta( $post->ID, '_page-protected', true ) === "yes" && !is_user_logged_in() ) {
+    if ( $post && get_post_meta( $post->ID, '_page-protected', true ) === "yes" && !is_user_logged_in() ) {
 
         $login_page = get_page_by_template_filename( 'template-student-login.php' );
 

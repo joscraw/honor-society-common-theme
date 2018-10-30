@@ -11,7 +11,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-    die( '-1' );
+	die( '-1' );
 } ?>
 
 <?php
@@ -20,109 +20,40 @@ global $more;
 $more = false;
 ?>
 
-<div class="list-event-container">
+<div class="tribe-events-loop">
 
-    <?php
+	<?php while ( have_posts() ) : the_post(); ?>
+    <div class="single-event-container">
+		<?php do_action( 'tribe_events_inside_before_loop' ); ?>
 
-    $search = new \CRMConnector\Database\EventSearch();
-    $query = $search->getEventsForLoggedInUserByRole();
+		<!-- Month / Year Headers -->
+		<?php tribe_events_list_the_date_headers(); ?>
 
-    if ( $query && $query->have_posts() )
-    {
-        while ( $query->have_posts() ) {
-            $query->the_post();
+		<!-- Event  -->
+		<?php
+		$post_parent = '';
+		if ( $post->post_parent ) {
+			$post_parent = ' data-parent-post-id="' . absint( $post->post_parent ) . '"';
+		}
+		?>
+		<div id="post-<?php the_ID() ?>" class="<?php tribe_events_event_classes() ?>" <?php echo $post_parent; ?>>
+			<?php
+			$event_type = tribe( 'tec.featured_events' )->is_featured( $post->ID ) ? 'featured' : 'event';
 
-            do_action( 'tribe_events_inside_before_loop' );
+			/**
+			 * Filters the event type used when selecting a template to render
+			 *
+			 * @param $event_type
+			 */
+			$event_type = apply_filters( 'tribe_events_list_view_event_type', $event_type );
 
-            $post_parent = '';
-            if ( $post->post_parent ) {
-                $post_parent = ' data-parent-post-id="' . absint( $post->post_parent ) . '"';
-            }
-            ?>
+			tribe_get_template_part( 'list/single', $event_type );
+			?>
+		</div>
 
-            <div class="list-event" id="post-<?php the_ID() ?>" <?php echo $post_parent; ?>>
 
-                <?php
-
-                // Setup an array of venue details for use later in the template
-                $venue_details = tribe_get_venue_details();
-
-                // The address string via tribe_get_venue_details will often be populated even when there's
-                // no address, so let's get the address string on its own for a couple of checks below.
-                $venue_address = tribe_get_address();
-
-                // Venue
-                $has_venue_address = ( ! empty( $venue_details['address'] ) ) ? ' location' : '';
-
-                // Organizer
-                $organizer = tribe_get_organizer();
-                ?>
-
-                <div class="list-event-header">
-                    <?php do_action( 'tribe_events_before_the_event_title' ) ?>
-                    <div class="list-event-title">
-                        <h3>
-                            <a class="list-event-url" href="<?php echo esc_url( tribe_get_event_link() ); ?>" title="<?php the_title_attribute() ?>" rel="bookmark">
-                                <?php the_title() ?>
-                            </a>
-                        </h3>
-                    </div>
-
-                    <!-- Event Cost -->
-                    <?php if ( tribe_get_cost() ) : ?>
-                        <div class="list-event-rsvp">
-                            <span class="ticket-cost"><?php echo tribe_get_cost( null, true ); ?></span>
-                            <?php
-                            /**
-                             * Runs after cost is displayed in list style views
-                             *
-                             * @since 4.5
-                             */
-                            do_action( 'tribe_events_inside_cost' );
-                            ?>
-                        </div>
-                    <?php endif; ?>
-                </div>
-
-                <!-- event description -->
-                <div class="list-event-description">
-                    <?php echo get_the_excerpt(); ?>
-                </div><!-- .tribe-events-list-event-description -->
-
-                <div class="list-event-footer">
-                    <div class="list-event-location">
-                        <span>
-                            <img src="<?php echo get_template_directory_uri() . '/assets/images/location_icon.png'; ?>">
-                            <?php echo tribe_get_city($post->ID) . ', ' .tribe_get_state($post->ID); ?>
-                        </span>
-                    </div>
-
-                    <div class="list-event-date">
-                   <span>
-                       <?php echo (new DateTime($post->EventStartDate))->format("j M"); ?>
-                   </span>
-                    </div>
-                    <div class="list-event-time">
-                        <span>
-                         <img src="<?php echo get_template_directory_uri() . '/assets/images/time_icon.png'; ?>">
-                         <?php
-                         echo sprintf("%s - %s",
-                             (new DateTime($post->EventStartDate))->format("g:i A"),
-                             (new DateTime($post->EventEndDate))->format("g:i A")
-                         );
-                         ?>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <?php
-        }
-    }
-    else
-    {
-        echo '<p>Couldn\'t Find Any Events</p>';
-    }
-    wp_reset_postdata();
-    ?>
+		<?php do_action( 'tribe_events_inside_after_loop' ); ?>
+    </div>
+	<?php endwhile; ?>
 
 </div><!-- .tribe-events-loop -->

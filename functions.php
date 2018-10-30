@@ -193,3 +193,64 @@ function register_theme_menus () {
 }
 
 add_action( 'init', 'register_theme_menus' );
+
+
+add_filter( 'tribe_events_list_show_date_headers', function() {
+    return false;
+});
+
+add_action( 'tribe_events_pre_get_posts', function($query) {
+
+/*    $query->query_vars['posts_per_page'] = -1;
+    $query->query_vars['meta_query'] = array(
+        array(
+            'key' => 'chapter',
+            'value' => 253,
+            'compare' => 'LIKE',
+        ),
+    );*/
+
+
+    $user = wp_get_current_user();
+    $current_user_roles = $user->roles;
+    $current_user_id = get_current_user_id();
+    $all_chapter_roles = ['administrator', 'honor_society_admin'];
+    $limited_chapter_roles = ['student', 'chapter_adviser', 'chapter_officer'];
+
+    $all_chapter_roles = array_filter($all_chapter_roles, function($role) use($current_user_roles) {
+        return in_array($role, $current_user_roles);
+    });
+
+    $limited_chapter_roles = array_filter($limited_chapter_roles, function($role) use($current_user_roles) {
+        return in_array($role, $current_user_roles);
+    });
+
+    if(!empty($all_chapter_roles)) {
+        // noop
+        $name = "Josh";
+    }
+
+    if(!empty($limited_chapter_roles)) {
+        $posts = get_posts([
+            'post_type' => 'contacts',
+            'posts_per_page' => 1,
+            'meta_query' => array(
+                array(
+                    'key' => 'portal_user',
+                    'value' => $current_user_id,
+                    'compare' => '=',
+                ),
+            ),
+        ]);
+        $chapter_id = get_post_meta($posts[0]->ID, 'account_name', true);
+        $query->query_vars['posts_per_page'] = 10;
+        $query->query_vars['meta_query'] = array(
+            array(
+                'key' => 'chapter',
+                'value' => $chapter_id,
+                'compare' => 'LIKE',
+            ),
+        );
+    }
+
+}, 10, 1 );
