@@ -243,8 +243,9 @@ add_action( 'tribe_events_pre_get_posts', function($query) {
             ),
         ]);
         $chapter_id = get_post_meta($posts[0]->ID, 'account_name', true);
+
         $query->query_vars['posts_per_page'] = 10;
-        $query->query_vars['meta_query'] = array(
+        $query->query_vars['meta_query'][] = array(
             array(
                 'key' => 'chapter',
                 'value' => $chapter_id,
