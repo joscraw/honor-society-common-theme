@@ -304,6 +304,9 @@ input[type="submit"],
     padding: 0 1rem;
     font-size: 0.9rem;
     font-weight: 800;
+    text-decoration: none;
+    position: relative;
+    vertical-align:middle
 }
 
 input[type="submit"]:hover,
@@ -312,6 +315,19 @@ input[type="submit"]:hover,
     background-color: #AC8B3A;
     cursor: pointer;
     cursor: hand;
+    text-decoration: none;
+}
+
+input[type="submit"].loading,
+.nscs-button.loading, .nscs-chapter-update__button.loading {
+    padding-right: 3rem;
+    background: #777 url('../images/spinner.svg') no-repeat right 1rem top 0.25rem;
+    background-size: 2rem 2rem;
+    cursor: wait;
+}
+
+.nscs-button--secondary {
+    background-color: #AC8B3A;
 }
 
 .input-group {
@@ -320,6 +336,60 @@ input[type="submit"]:hover,
 
 .input-group:focus-within label {
     color: #9E1D25;
+}
+
+.input-group span {
+    font-size: 0.75rem;
+    display: block;
+    margin: 7px 0 -20px 0;
+}
+
+.input-group span a {
+    font-size: inherit;
+    color: #777;
+    text-decoration: none;
+}
+
+.input-group span a:hover {
+    color: #9E1D25;
+    text-decoration: underline;
+}
+
+.ta-right {
+    text-align: right;
+}
+
+.or {
+    display: inline-block;
+    margin: 0 10px;
+    position: relative;
+    height: 2.5rem;
+    width: 50px;
+    vertical-align: bottom;
+    color: #777;
+}
+
+.or:before {
+    content: 'or';
+    background-color: #FFF;
+    position: absolute;
+    width: 30px;
+    z-index: 2;
+    line-height: 2.5rem;
+    padding: 0 5px;
+    left: 50%;
+    margin-left: -15px;
+}
+
+.or:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    height: 1px;
+    left: 0;
+    right: 0;
+    background-color: #777;
+    z-index: 1;
 }
 
 .shell {
@@ -437,6 +507,7 @@ input.masked,
     height: 75%;
     background: transparent url('../images/background-sign-up.png') no-repeat bottom left;
     background-size: cover;
+    pointer-events: none;
 }
 
 .nscs-auth__bg--registration {
@@ -621,12 +692,12 @@ input.masked,
     display: inline-block;
 }
 
-.nscs-product .nscs-button--active:before {
+.nscs-product .nscs-button.added:before {
     content: 'ADDED';
     display: inline-block;
 }
 
-.nscs-product .nscs-button--active,
+.nscs-product .nscs-button.added,
 .nscs-product .nscs-button:hover {
     background-color: #6DA0A9;
 }
@@ -641,6 +712,60 @@ input.masked,
     display: inline-block;
     margin: 0 0 0 1rem;
 }
+
+.nscs-confirmation {
+    display: none;
+    text-align: center;
+}
+
+.nscs-confirmation__check {
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    background: #72C436 url('../images/check.svg') no-repeat center center;
+    background-size: 30px 30px;
+    margin: 0 auto 3rem auto;
+}
+
+.nscs-confirmation__title {
+    color: #AC8B3A;
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.nscs-confirmation__subtitle {
+    color: #333333;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 1.5rem 0 0 0;
+}
+
+.nscs-confirmation__product-confirmation {
+    margin-top: 2rem;
+}
+
+.nscs-confirmation__product-confirmation ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nscs-confirmation__product-confirmation ul li {
+    list-style: none;
+    margin: 0 0 .5rem;
+    padding: 0;
+}
+
+.nscs-confirmation__product-confirmation:empty {
+    margin-top: 0;
+}
+
+.nscs-button__continue-to-home {
+    margin-top: 2.5rem;
+}
+
 
 @media(max-width: 992px) {
 

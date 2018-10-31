@@ -10,7 +10,7 @@ get_header(); ?>
         <div class="nscs-auth__bg"></div>
 
         <div class="nscs-auth__content">
-            
+
             <?php include('inc/auth-header.php') ?>
 
             <form id="nscs-auth__login-form">
@@ -27,18 +27,13 @@ get_header(); ?>
                 <div class="input-group">
                     <label for="last_name">Enter password</label>
                     <input type="password" name="password" id="password" placeholder="********" required>
-                </div>
-
-                <div class="input-group">
-                    <p>Not Registered? <a href="/sign-up">Sign Up Here.</a></p>
-                </div>
-
-                <div class="input-group">
-                    <p><a href="/password-reset">Reset Password</a></p>
+                    <span class="ta-right"><a href="<?php echo wp_lostpassword_url(); ?>">Forgot your Password?</a></span>
                 </div>
 
                 <div class="input-group">
                     <input type="submit" value="Login">
+                    <div class="or"></div>
+                    <a class="nscs-button nscs-button--secondary" href="/sign-up">Sign Up</a>
                 </div>
 
                 <input type="hidden" name="action" value="student_login" />
@@ -59,6 +54,7 @@ get_header(); ?>
                         if ( !nscsLoginFormSubmitting ) {
 
                             nscsLoginFormSubmitting = true;
+                            $('#nscs-auth__login-form input[type=submit]').addClass('loading');
 
                             var SignUpForm = jQuery(this).serialize();
                             jQuery.ajax({
@@ -80,6 +76,7 @@ get_header(); ?>
                                 },
                                 complete: function() {
                                     nscsLoginFormSubmitting = false;
+                                    $('#nscs-auth__login-form input[type=submit]').removeClass('loading');
                                 }
                             });
 

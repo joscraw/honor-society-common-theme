@@ -10,7 +10,7 @@ get_header(); ?>
         <div class="nscs-auth__bg"></div>
 
         <div class="nscs-auth__content">
-            
+
             <?php include('inc/auth-header.php') ?>
 
             <form id="nscs-auth__sign-up-form">
@@ -37,7 +37,7 @@ get_header(); ?>
                 <div class="input-group">
                     <label for="last_name">Enter password</label>
                     <input type="password" name="password" id="password" placeholder="********" required
-                        pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" 
+                        pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
                         title="Password must be at least 8 characters and contain an uppercase, lowercase, number, and special character.">
                 </div>
 
@@ -63,6 +63,7 @@ get_header(); ?>
                         if ( !nscsSignUpFormSubmitting ) {
 
                             nscsSignUpFormSubmitting = true;
+                            $('#nscs-auth__sign-up-form input[type=submit]').addClass('loading');
 
                             var SignUpForm = jQuery(this).serialize();
                             jQuery.ajax({
@@ -75,7 +76,7 @@ get_header(); ?>
                                 success: function(data) {
 
                                     data = JSON.parse(data);
-                                    
+
                                     if( !!data.error ) {
                                         $('.nscs-auth__message').html(data.error);
                                     } else {
@@ -84,6 +85,7 @@ get_header(); ?>
                                 },
                                 complete: function() {
                                     nscsSignUpFormSubmitting = false;
+                                    $('#nscs-auth__sign-up-form input[type=submit]').removeClass('loading');
                                 }
                             });
 

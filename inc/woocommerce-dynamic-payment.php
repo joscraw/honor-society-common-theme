@@ -217,3 +217,30 @@ function nscs_ajax_student_payment() {
 add_action('wp_ajax_student_payment', 'nscs_ajax_student_payment');
 add_action('wp_ajax_nopriv_student_payment', 'nscs_ajax_student_payment');
 
+/*
+ * Payment for Upcharge
+ */
+function nscs_ajax_upcharge() {
+
+    check_ajax_referer( 'upcharge', 'nonce' );
+
+    $user = wp_get_current_user();
+    $user_info = get_userdata( $user->ID );
+    $product_ids = explode( ',', $_REQUEST['product_ids'] );
+
+    echo json_encode( nscs_woocommerce_dynamic_order( $user->ID, [
+        'first_name' => $user->first_name ?: "Valued",
+        'last_name'  => $user->last_name ?: "Customer",
+        'email'      => $user_info->user_email,
+        'address_1'  => null,
+        'city'       => null,
+        'state'      => null,
+        'postcode'   => null,
+        'country'    => 'US'
+    ], $product_ids ) );
+
+    die();
+}
+add_action('wp_ajax_upcharge', 'nscs_ajax_upcharge');
+add_action('wp_ajax_nopriv_upcharge', 'nscs_ajax_upcharge');
+

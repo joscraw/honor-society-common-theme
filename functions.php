@@ -32,78 +32,6 @@ add_filter('tribe_events_pro_widget_calendar_stylesheet_url', function() {
     return $styleUrl;
 });
 
-/*add_filter( 'tribe_events_pre_get_posts', 'redirect_from_events' );
-
-function redirect_from_events( $query ) {
-
-    if ( is_user_logged_in() )
-        return;
-
-    if ( ! $query->is_main_query() || ! $query->get( 'eventDisplay' ) )
-        return;
-
-// Look for a page with a slug of "logged-in-users-only".
-    $target_page = get_posts( array(
-        'post_type' => 'page',
-        'name' => 'logged-in-users-only'
-    ) );
-
-// Use the target page URL if found, else use the home page URL.
-    if ( empty( $target_page ) ) {
-        $url = get_home_url();
-    } else {
-        $target_page = current( $target_page );
-        $url = get_permalink( $target_page->ID );
-    }
-
-// Redirect!
-    wp_safe_redirect( $url );
-    exit;
-}*/
-
-/* ------------------------------------ START LOGIN LOGIC ------------------------------------*/
-
-///* Main redirection of the default login page */
-//function redirect_login_page() {
-//    $login_page  = home_url('/login/');
-//    $page_viewed = basename($_SERVER['REQUEST_URI']);
-//
-//    if($page_viewed == "wp-login.php" && $_SERVER['REQUEST_METHOD'] == 'GET') {
-//        wp_redirect($login_page);
-//        exit;
-//    }
-//}
-//add_action('init','redirect_login_page');
-//
-///* Where to go if a login failed */
-//function custom_login_failed() {
-//    $login_page  = home_url('/login/');
-//    wp_redirect($login_page . '?login=failed');
-//    exit;
-//}
-//add_action('wp_login_failed', 'custom_login_failed');
-//
-///* Where to go if any of the fields were empty */
-//function verify_user_pass($user, $username, $password) {
-//    $login_page  = home_url('/login/');
-//    if($username == "" || $password == "") {
-//        wp_redirect($login_page . "?login=empty");
-//        exit;
-//    }
-//}
-//add_filter('authenticate', 'verify_user_pass', 1, 3);
-//
-///* What to do on logout */
-//function logout_redirect() {
-//    $login_page  = home_url('/login/');
-//    wp_redirect($login_page . "?login=false");
-//    exit;
-//}
-//add_action('wp_logout','logout_redirect');
-
-
-/* ------------------------------------ END LOGIN LOGIC ------------------------------------*/
-
 
 add_filter('tribe_events_get_current_month_day', function($current_day){
 
@@ -234,16 +162,19 @@ add_action( 'tribe_events_pre_get_posts', function($query) {
                 ),
             ),
         ]);
-        $chapter_id = get_post_meta($posts[0]->ID, 'account_name', true);
 
-        $query->query_vars['posts_per_page'] = 10;
-        $query->query_vars['meta_query'][] = array(
-            array(
-                'key' => 'chapter',
-                'value' => $chapter_id,
-                'compare' => 'LIKE',
-            ),
-        );
+        if( !empty($posts) ) {
+            $chapter_id = get_post_meta($posts[0]->ID, 'account_name', true);
+
+            $query->query_vars['posts_per_page'] = 10;
+            $query->query_vars['meta_query'][] = array(
+                array(
+                    'key' => 'chapter',
+                    'value' => $chapter_id,
+                    'compare' => 'LIKE',
+                ),
+            );
+        }
     }
 
 }, 10, 1 );

@@ -7,10 +7,10 @@
     <div class="nscs-auth__bg nscs-auth__bg--registration"></div>
 
     <div class="nscs-auth__content nscs-auth__content--registration">
-        
-        <?php 
+
+        <?php
             $auth_title = "Complete Payment";
-            include('auth-header.php') 
+            include('auth-header.php')
         ?>
 
         <form id="nscs-auth__registration-form">
@@ -181,6 +181,7 @@
                     if ( !nscsPaymentFormSubmitting ) {
 
                         nscsPaymentFormSubmitting = true;
+                        $('#nscs-auth__registration-form input[type=submit]').addClass('loading');
 
                         // Create a form object we can actually use
                         var PaymentForm = $(this).serialize();
@@ -221,13 +222,14 @@
                                         data = JSON.parse(data);
 
                                         if( !!data.success ) {
-                                            location.reload( "<?php echo get_bloginfo('url') ?>/?extras=true" );
+                                            window.location = window.location.pathname + '?extras=true';
                                         } else {
                                             $('.nscs-auth__message').html(data.message);
                                         }
                                     },
                                     complete: function() {
                                         nscsPaymentFormSubmitting = false;
+                                        $('#nscs-auth__registration-form input[type=submit]').removeClass('loading');
                                     }
                                 });
                             }
