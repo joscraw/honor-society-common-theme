@@ -199,17 +199,9 @@ add_filter( 'tribe_events_list_show_date_headers', function() {
     return false;
 });
 
+// Ensure only events that a part of a chapter a user belongs to show
+// If the user is an admin then show all events
 add_action( 'tribe_events_pre_get_posts', function($query) {
-
-/*    $query->query_vars['posts_per_page'] = -1;
-    $query->query_vars['meta_query'] = array(
-        array(
-            'key' => 'chapter',
-            'value' => 253,
-            'compare' => 'LIKE',
-        ),
-    );*/
-
 
     $user = wp_get_current_user();
     $current_user_roles = $user->roles;
