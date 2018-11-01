@@ -32,7 +32,7 @@ add_filter('tribe_events_pro_widget_calendar_stylesheet_url', function() {
     return $styleUrl;
 });
 
-
+/*
 add_filter('tribe_events_get_current_month_day', function($current_day){
 
 
@@ -72,7 +72,7 @@ add_filter('tribe_events_get_current_month_day', function($current_day){
 
     return $current_day;
 
-}, 10, 1);
+}, 10, 1);*/
 
 /********* PAGINATION ***********/
 function pagination($pages = '', $range = 4)

@@ -123,59 +123,41 @@ img {
 
 /*************************************************** START HOMEPAGE STYLES ***************************************************/
 
-.main-content {
-    padding-top: 20px;
-    margin-bottom: 20px;
-}
 
 .main-content .top-content {
     display: flex;
 }
 
-.main-content .top-content {
-    display: flex;
-}
 
 .homepage-moot-container {
-    width: 50%;
-    border: 1px solid #D7E5E8;
-    padding: 10px;
-    margin-right: 10%;
-    height: 500px;
-    overflow-y: scroll;
+    width: 70%;
+    padding: 50px 0;
 }
 
 .homepage-calendar {
     width: 30%;
-    border: 1px solid #D7E5E8;
-    padding: 10px;
+    padding: 50px 10px 30px 5px;
 }
 
 .tribe-events-title a {
     color: #6DA0A9;
 }
 
-.bottom-content {
-    background-color: #383838;
-    padding: 50px 0;
-}
-
 .bottom-content .main-content {
+    margin-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
-    padding: 5px;
-    margin-bottom: 20px;
 }
 
 .tab {
     cursor: pointer;
-    height: 100px;
+    height: 80px;
     box-sizing: border-box;
-    flex: 30%;
+    flex: 40%;
     background-color: #AC8B3A;
     color: #FFF;
     border-radius: 10px;
-    margin: 5px 10px 30px 5px;
+    margin: 0 15px 20px 5px;
     position: relative;
 
 }
