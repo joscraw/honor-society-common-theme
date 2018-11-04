@@ -41,6 +41,7 @@
 
 .tribe-events-loop {
     display: flex;
+    flex-wrap: wrap;
     max-width: 1200px !important;
 }
 
@@ -51,4 +52,26 @@
 .tribe-events-loop .single-event-container {
     width: 50%;
 }
+
+.tribe-events-list .type-tribe_events:first-of-type {
+    margin-top: 0;
+}
+
+.tribe-events-list .type-tribe_events {
+    width: 33%;
+}
+
+@media only screen and (max-width: 800px) {
+    .tribe-events-list .type-tribe_events {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .tribe-events-list .type-tribe_events {
+        width: 100%;
+    }
+}
+
+
 /* -------------------------------- END LIST PAGE -------------------------------- */

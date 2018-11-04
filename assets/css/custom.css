@@ -10,6 +10,10 @@ html {
     font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
 }
 
+body {
+    padding: 0 20px;
+}
+
 /*************************************************** START UITLS ***************************************************/
 
 h1, h2, h3, h4, h5, h6, a, button, input[type="button"], input[type="submit"], label {
