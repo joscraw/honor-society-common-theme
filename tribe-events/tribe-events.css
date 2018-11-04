@@ -67,11 +67,5 @@
     }
 }
 
-@media only screen and (max-width: 768px) {
-    .tribe-events-list .type-tribe_events {
-        width: 100%;
-    }
-}
-
 
 /* -------------------------------- END LIST PAGE -------------------------------- */
