@@ -9,6 +9,7 @@ define('ACF_EARLY_ACCESS', '5');
 
 include( dirname( __FILE__ ) . '/inc/woocommerce-dynamic-payment.php');
 include(dirname(__FILE__) . '/inc/auth.php');
+include(dirname(__FILE__) . '/inc/helpers.php');
 
 add_action('wp_enqueue_scripts', function()
 {

@@ -95,6 +95,10 @@ function nscs_ajax_create_student(){
         echo json_encode( array(
             'error' => "The email `${email}` is already in use."
         ));
+    } else if ( !in_array( $email, get_meta_values('email', 'contacts' ) ) ) {
+        echo json_encode( array(
+            'error' => "Email `${email}` is not an authorized email within our system.  Please register for entry <a href=\"#\">here</a>"
+        ));
     } else {
 
         $new_student_id = wp_insert_user( array(
