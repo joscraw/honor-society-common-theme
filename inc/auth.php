@@ -97,7 +97,7 @@ function nscs_ajax_create_student(){
         ));
     } else if ( !in_array( $email, get_meta_values('email', 'contacts' ) ) ) {
         echo json_encode( array(
-            'error' => "Email `${email}` is not an authorized email within our system.  Please register for entry <a href=\"#\">here</a>"
+            'error' => "Email `${email}` is not an authorized email within our system.  Please register for entry <a href=\"https://nscs.org/self-nomination\">here</a>"
         ));
     } else {
 
@@ -111,6 +111,19 @@ function nscs_ajax_create_student(){
         ));
 
         if ( !is_wp_error( $new_student_id ) ) {
+
+            // Set the user to contact
+            $contact = get_posts( array(
+                'post_type' => 'contacts',
+                'meta_key'  => 'email',
+                'meta_value' => $email
+
+            ));
+
+            if( ! empty( $contact ) ) {
+                update_field('portal_user', $new_student_id, $contact[0]->ID);
+            }
+
 
             wp_signon( array(
                 'user_login' => $email,
