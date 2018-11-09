@@ -27,13 +27,16 @@
             "name": "first_name",
             "type": "text",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "33",
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "default_value": "",
             "placeholder": "",
             "prepend": "",
@@ -46,13 +49,16 @@
             "name": "last_name",
             "type": "text",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "33",
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "default_value": "",
             "placeholder": "",
             "prepend": "",
@@ -259,5 +265,5 @@
     ],
     "active": 1,
     "description": "Contact",
-    "modified": 1538688517
+    "modified": 1541744116
 }
