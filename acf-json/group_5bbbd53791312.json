@@ -34,11 +34,14 @@
                         "class": "",
                         "id": ""
                     },
+                    "user_roles": [
+                        "all"
+                    ],
                     "post_type": [
                         "contacts"
                     ],
                     "taxonomy": [],
-                    "allow_null": 0,
+                    "allow_null": 1,
                     "multiple": 0,
                     "return_format": "object",
                     "ui": 1
@@ -56,6 +59,9 @@
                         "class": "",
                         "id": ""
                     },
+                    "user_roles": [
+                        "all"
+                    ],
                     "choices": {
                         "Account Manager": "Account Manager",
                         "Decision Maker\/Exec Sponsor": "Decision Maker\/Exec Sponsor",
@@ -63,7 +69,7 @@
                         "Other": "Other"
                     },
                     "default_value": [],
-                    "allow_null": 0,
+                    "allow_null": 1,
                     "multiple": 0,
                     "ui": 0,
                     "return_format": "value",
@@ -90,5 +96,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Partner Opportunity",
-    "modified": 1539036625
+    "modified": 1541960869
 }

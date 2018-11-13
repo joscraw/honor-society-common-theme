@@ -15,11 +15,14 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "post_type": [
                 "chapter_leadership"
             ],
             "taxonomy": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 1,
             "return_format": "object",
             "ui": 1
@@ -42,5 +45,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Contact",
-    "modified": 1538770182
+    "modified": 1541789805
 }

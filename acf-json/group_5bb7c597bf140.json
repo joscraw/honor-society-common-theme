@@ -32,6 +32,9 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "choices": {
                 "General NSCS FAQ": "General NSCS FAQ",
                 "Password Issue\/Question": "Password Issue\/Question",
@@ -41,7 +44,7 @@
                 "Other": "Other"
             },
             "default_value": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 1,
             "ui": 0,
             "return_format": "value",
@@ -93,5 +96,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Contact",
-    "modified": 1539037814
+    "modified": 1541789864
 }

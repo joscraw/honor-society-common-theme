@@ -193,6 +193,9 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "choices": {
                 "I need the money for something else": "I need the money for something else",
                 "I don't see the benefit of membership": "I don't see the benefit of membership",
@@ -202,7 +205,7 @@
                 "Terminated date": "Terminated date"
             },
             "default_value": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 0,
             "ui": 0,
             "return_format": "value",
@@ -242,5 +245,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1538766506
+    "modified": 1541788880
 }

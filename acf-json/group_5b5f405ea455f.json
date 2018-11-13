@@ -75,6 +75,9 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "choices": {
                 "Diamond": "Diamond",
                 "Platinum": "Platinum",
@@ -85,7 +88,7 @@
                 "New Chapter (No Ranking)": "New Chapter (No Ranking)"
             },
             "default_value": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 0,
             "ui": 0,
             "return_format": "value",
@@ -124,10 +127,13 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "role": [
                 "honor_society_admin"
             ],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 0,
             "return_format": "array"
         }
@@ -164,5 +170,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1539036966
+    "modified": 1541960798
 }

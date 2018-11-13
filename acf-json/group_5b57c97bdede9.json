@@ -202,6 +202,9 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "choices": {
                 "Platinum": "Platinum",
                 "Gold": "Gold",
@@ -212,7 +215,7 @@
                 "New Chapter": "New Chapter"
             },
             "default_value": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 0,
             "ui": 0,
             "return_format": "value",
@@ -232,6 +235,9 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "choices": {
                 "Platinum": "Platinum",
                 "Certified": "Certified",
@@ -243,7 +249,7 @@
                 "New Chapter": "New Chapter"
             },
             "default_value": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 0,
             "ui": 0,
             "return_format": "value",
@@ -263,6 +269,9 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "choices": {
                 "Platinum": "Platinum",
                 "Certified": "Certified",
@@ -274,7 +283,7 @@
                 "New Chapter": "New Chapter"
             },
             "default_value": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 0,
             "ui": 0,
             "return_format": "value",
@@ -294,6 +303,9 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "choices": {
                 "Platinum": "Platinum",
                 "Certified": "Certified",
@@ -305,7 +317,7 @@
                 "New Chapter": "New Chapter"
             },
             "default_value": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 0,
             "ui": 0,
             "return_format": "value",
@@ -402,5 +414,5 @@
     ],
     "active": 1,
     "description": "Chapter",
-    "modified": 1538515024
+    "modified": 1541961453
 }

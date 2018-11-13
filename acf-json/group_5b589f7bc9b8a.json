@@ -15,6 +15,9 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "choices": {
                 "Female": "Female",
                 "Male": "Male",
@@ -22,7 +25,7 @@
                 "Prefer not to say": "Prefer not to say"
             },
             "default_value": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 0,
             "ui": 0,
             "return_format": "value",
@@ -42,6 +45,9 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "choices": {
                 "African American\/Black": "African American\/Black",
                 "American Indian\/Alaska Native": "American Indian\/Alaska Native",
@@ -50,7 +56,7 @@
                 "Hispanic\/Latino": "Hispanic\/Latino"
             },
             "default_value": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 0,
             "ui": 0,
             "return_format": "value",
@@ -184,13 +190,16 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "choices": {
                 "Attend Part-Time": "Attend Part-Time",
                 "Financially Independant": "Financially Independant",
                 "Work Full Time": "Work Full Time"
             },
             "default_value": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 0,
             "ui": 0,
             "return_format": "value",
@@ -253,5 +262,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1538688864
+    "modified": 1541788790
 }

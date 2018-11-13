@@ -72,11 +72,14 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "post_type": [
                 "contacts"
             ],
             "taxonomy": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 0,
             "return_format": "object",
             "ui": 1
@@ -94,13 +97,16 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "choices": {
                 "Active": "Active",
                 "Pending": "Pending",
                 "Defunct": "Defunct"
             },
             "default_value": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 0,
             "ui": 0,
             "return_format": "value",
@@ -120,6 +126,9 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "choices": {
                 "Discount": "Discount",
                 "Scholarship": "Scholarship",
@@ -129,7 +138,7 @@
                 "Travel": "Travel"
             },
             "default_value": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 1,
             "ui": 0,
             "return_format": "value",
@@ -173,5 +182,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Partner Account",
-    "modified": 1538603611
+    "modified": 1541960550
 }

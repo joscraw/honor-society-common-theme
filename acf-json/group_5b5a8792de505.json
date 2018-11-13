@@ -34,6 +34,9 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "choices": {
                 "afghanistan": "Afghanistan",
                 "albania": "Albania",
@@ -269,10 +272,8 @@
                 "zambia": "Zambia",
                 "zimbabwe": "Zimbabwe"
             },
-            "default_value": [
-                "united_states"
-            ],
-            "allow_null": 0,
+            "default_value": [],
+            "allow_null": 1,
             "multiple": 0,
             "ui": 0,
             "return_format": "value",
@@ -403,6 +404,9 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "choices": {
                 "AK": "AK",
                 "AL": "AL",
@@ -458,7 +462,7 @@
             "default_value": [
                 "\"\""
             ],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 0,
             "ui": 0,
             "return_format": "value",
@@ -518,6 +522,9 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "choices": {
                 "afghanistan": "Afghanistan",
                 "albania": "Albania",
@@ -753,10 +760,8 @@
                 "zambia": "Zambia",
                 "zimbabwe": "Zimbabwe"
             },
-            "default_value": [
-                "united_states"
-            ],
-            "allow_null": 0,
+            "default_value": [],
+            "allow_null": 1,
             "multiple": 0,
             "ui": 0,
             "return_format": "value",
@@ -887,6 +892,9 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "choices": {
                 "AK": "AK",
                 "AL": "AL",
@@ -940,7 +948,7 @@
                 "WY": "WY"
             },
             "default_value": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 0,
             "ui": 0,
             "return_format": "value",
@@ -1001,5 +1009,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1538688231
+    "modified": 1541790245
 }

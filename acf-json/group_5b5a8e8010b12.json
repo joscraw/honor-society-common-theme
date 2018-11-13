@@ -15,6 +15,9 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "choices": {
                 "None": "None",
                 "Mr.": "Mr.",
@@ -26,7 +29,7 @@
                 "Provost": "Provost"
             },
             "default_value": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 0,
             "ui": 0,
             "return_format": "value",
@@ -103,12 +106,15 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "choices": {
                 "yes": "Yes",
                 "no": "No",
                 "unknown": "Unknown"
             },
-            "allow_null": 0,
+            "allow_null": 1,
             "default_value": "",
             "layout": "horizontal",
             "return_format": "value"
@@ -221,12 +227,15 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "choices": {
                 "yes": "Yes",
                 "no": "No",
                 "unknown": "Unknown"
             },
-            "allow_null": 0,
+            "allow_null": 1,
             "default_value": "",
             "layout": "horizontal",
             "return_format": "value"
@@ -264,5 +273,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1538768911
+    "modified": 1541790099
 }

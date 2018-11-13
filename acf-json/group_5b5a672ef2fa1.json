@@ -148,6 +148,9 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "choices": {
                 "Blogging": "Blogging",
                 "Premium Content": "Premium Content",
@@ -169,7 +172,7 @@
                 "Traditional \/ Offline Networking": "Traditional \/ Offline Networking"
             },
             "default_value": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 0,
             "ui": 0,
             "return_format": "value",
@@ -194,5 +197,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1538689427
+    "modified": 1541788591
 }

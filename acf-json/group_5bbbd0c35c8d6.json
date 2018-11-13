@@ -54,11 +54,14 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "post_type": [
                 "partner_account"
             ],
             "taxonomy": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 0,
             "return_format": "object",
             "ui": 1
@@ -76,13 +79,16 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "choices": {
                 "NSCS Partnership": "NSCS Partnership",
                 "NSCS\/TOLA Partnership": "NSCS\/TOLA Partnership",
                 "TOLA Partnership": "TOLA Partnership"
             },
             "default_value": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 0,
             "ui": 0,
             "return_format": "value",
@@ -123,6 +129,9 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "choices": {
                 "1": "1",
                 "2": "2",
@@ -131,7 +140,7 @@
                 "5": "5"
             },
             "default_value": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 0,
             "ui": 0,
             "return_format": "value",
@@ -151,6 +160,9 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "choices": {
                 "Identified New Opportunity": "Identified New Opportunity",
                 "Scheduling": "Scheduling",
@@ -162,7 +174,7 @@
                 "Pending Renewal": "Pending Renewal"
             },
             "default_value": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 0,
             "ui": 0,
             "return_format": "value",
@@ -182,6 +194,9 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "choices": {
                 "0%": "0%",
                 "25%": "25%",
@@ -190,7 +205,7 @@
                 "100%": "100%"
             },
             "default_value": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 0,
             "ui": 0,
             "return_format": "value",
@@ -253,5 +268,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Partner Opportunity",
-    "modified": 1539036682
+    "modified": 1541961512
 }

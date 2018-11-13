@@ -47,8 +47,11 @@
                         "class": "",
                         "id": ""
                     },
+                    "user_roles": [
+                        "all"
+                    ],
                     "role": "",
-                    "allow_null": 0,
+                    "allow_null": 1,
                     "multiple": 0,
                     "return_format": "array"
                 }
@@ -87,5 +90,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1538766452
+    "modified": 1541960894
 }

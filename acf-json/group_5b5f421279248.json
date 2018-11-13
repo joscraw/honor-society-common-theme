@@ -108,10 +108,13 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "role": [
                 "honor_society_admin"
             ],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 1,
             "return_format": "array"
         },
@@ -145,6 +148,9 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "choices": {
                 "Advisor Training\/Meeting": "Advisor Training\/Meeting",
                 "Officer Training\/Meeting": "Officer Training\/Meeting",
@@ -156,7 +162,7 @@
                 "PACE Event": "PACE Event"
             },
             "default_value": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 0,
             "ui": 0,
             "return_format": "value",
@@ -200,5 +206,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1539037623
+    "modified": 1541961683
 }

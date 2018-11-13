@@ -51,13 +51,16 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "choices": {
                 "Control": "Control",
                 "Open Record": "Open Record",
                 "Label": "Label"
             },
             "default_value": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 0,
             "ui": 0,
             "return_format": "value",
@@ -77,13 +80,16 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "choices": {
                 "Full Campaign": "Full Campaign",
                 "Direct Mail Only": "Direct Mail Only",
                 "Email Only": "Email Only"
             },
             "default_value": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 0,
             "ui": 0,
             "return_format": "value",
@@ -205,11 +211,14 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "post_type": [
                 "chapters_invitations"
             ],
             "taxonomy": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 1,
             "return_format": "object",
             "ui": 1
@@ -247,5 +256,5 @@
     ],
     "active": 1,
     "description": "Drop",
-    "modified": 1538955984
+    "modified": 1541961194
 }

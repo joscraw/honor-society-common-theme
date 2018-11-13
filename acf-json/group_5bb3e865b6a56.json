@@ -151,13 +151,16 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "choices": {
                 "--None--": "--None--",
                 "Active": "Active",
                 "Inactive": "Inactive"
             },
             "default_value": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 0,
             "ui": 0,
             "return_format": "value",
@@ -194,13 +197,16 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "choices": {
                 "--None--": "--None--",
                 "Yes": "Yes",
                 "No": "No"
             },
             "default_value": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 0,
             "ui": 0,
             "return_format": "value",
@@ -244,5 +250,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Pace",
-    "modified": 1538517849
+    "modified": 1541960756
 }

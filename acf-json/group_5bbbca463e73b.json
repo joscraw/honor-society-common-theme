@@ -34,6 +34,9 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "choices": {
                 "Scholarship": "Scholarship",
                 "Event": "Event",
@@ -43,7 +46,7 @@
                 "Travel": "Travel"
             },
             "default_value": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 0,
             "ui": 0,
             "return_format": "value",
@@ -211,11 +214,14 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "post_type": [
                 "partner_account"
             ],
             "taxonomy": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 0,
             "return_format": "object",
             "ui": 1
@@ -238,5 +244,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Benefit",
-    "modified": 1539035115
+    "modified": 1541961150
 }

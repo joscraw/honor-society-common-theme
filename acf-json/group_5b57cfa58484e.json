@@ -79,12 +79,15 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "choices": {
                 "Quarter": "Quarter",
                 "Semester": "Semester"
             },
             "default_value": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 0,
             "ui": 0,
             "return_format": "value",
@@ -348,5 +351,5 @@
     ],
     "active": 1,
     "description": "Chapter",
-    "modified": 1538458009
+    "modified": 1541960628
 }

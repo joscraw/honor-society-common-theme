@@ -89,6 +89,9 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "choices": {
                 "GENERAL AGRICULTURE": "GENERAL AGRICULTURE",
                 "AGRICULTURE PRODUCTION AND MANAGEMENT": "AGRICULTURE PRODUCTION AND MANAGEMENT",
@@ -265,7 +268,7 @@
                 "MISCELLANEOUS SOCIAL SCIENCES": "MISCELLANEOUS SOCIAL SCIENCES"
             },
             "default_value": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 0,
             "ui": 0,
             "return_format": "value",
@@ -285,6 +288,9 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "choices": {
                 "GENERAL AGRICULTURE": "GENERAL AGRICULTURE",
                 "AGRICULTURE PRODUCTION AND MANAGEMENT": "AGRICULTURE PRODUCTION AND MANAGEMENT",
@@ -461,7 +467,7 @@
                 "MISCELLANEOUS SOCIAL SCIENCES": "MISCELLANEOUS SOCIAL SCIENCES"
             },
             "default_value": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 0,
             "ui": 0,
             "return_format": "value",
@@ -481,11 +487,14 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "choices": {
                 "Need to pull in from gifted hire": "Need to pull in from gifted hire"
             },
             "default_value": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 0,
             "ui": 0,
             "return_format": "value",
@@ -525,5 +534,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1538689182
+    "modified": 1541788836
 }

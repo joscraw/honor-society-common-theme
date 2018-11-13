@@ -463,12 +463,15 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "choices": {
                 "Advisor": "Advisor",
                 "Other": "Other"
             },
             "default_value": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 0,
             "ui": 0,
             "return_format": "value",
@@ -526,13 +529,16 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "choices": {
                 "Check": "Check",
                 "ACH (Direct Deposit)": "ACH (Direct Deposit)",
                 "Credit Card": "Credit Card"
             },
             "default_value": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 0,
             "ui": 0,
             "return_format": "value",
@@ -552,12 +558,15 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "choices": {
                 "Before Mailing": "Before Mailing",
                 "After Mailing": "After Mailing"
             },
             "default_value": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 0,
             "ui": 0,
             "return_format": "value",
@@ -745,5 +754,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1538960003
+    "modified": 1541961391
 }

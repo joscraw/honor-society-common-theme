@@ -15,11 +15,14 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "post_type": [
                 "chapters_invitations"
             ],
             "taxonomy": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 1,
             "return_format": "object",
             "ui": 1
@@ -37,11 +40,14 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "post_type": [
                 "chapter_summaries"
             ],
             "taxonomy": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 1,
             "return_format": "object",
             "ui": 1
@@ -64,5 +70,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Chapter",
-    "modified": 1538515710
+    "modified": 1541960727
 }

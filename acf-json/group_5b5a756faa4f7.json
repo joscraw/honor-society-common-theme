@@ -55,6 +55,9 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "message": "",
             "default_value": 0,
             "ui": 0,
@@ -93,6 +96,9 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "choices": {
                 "Applied for a scholarship": "Applied for a scholarship",
                 "Attended an on-campus event\/activity": "Attended an on-campus event\/activity",
@@ -103,7 +109,7 @@
                 "None so far": "None so far"
             },
             "default_value": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 0,
             "ui": 0,
             "return_format": "value",
@@ -123,6 +129,9 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "choices": {
                 "Different\/More Scholarships": "Different\/More Scholarships",
                 "More frequent on-campus events": "More frequent on-campus events",
@@ -131,7 +140,7 @@
                 "More\/Different Discounts": "More\/Different Discounts"
             },
             "default_value": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 0,
             "ui": 0,
             "return_format": "value",
@@ -170,6 +179,9 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "choices": {
                 "Alpha Lambda Delta": "Alpha Lambda Delta",
                 "Golden Key International Honor Society": "Golden Key International Honor Society",
@@ -178,7 +190,7 @@
                 "Society for College Leadership and Achievement": "Society for College Leadership and Achievement"
             },
             "default_value": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 1,
             "ui": 0,
             "return_format": "value",
@@ -218,5 +230,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1538768238
+    "modified": 1541790433
 }

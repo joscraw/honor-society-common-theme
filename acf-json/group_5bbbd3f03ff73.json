@@ -32,12 +32,15 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "choices": {
                 "TBC": "TBC",
                 "TBC1": "TBC1"
             },
             "default_value": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 0,
             "ui": 0,
             "return_format": "value",
@@ -81,5 +84,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Partner Opportunity",
-    "modified": 1539036229
+    "modified": 1541960809
 }

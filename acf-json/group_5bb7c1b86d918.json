@@ -53,6 +53,9 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "choices": {
                 "President": "President",
                 "Chancellor": "Chancellor",
@@ -73,7 +76,7 @@
                 "Registrar": "Registrar"
             },
             "default_value": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 0,
             "ui": 0,
             "return_format": "value",
@@ -151,5 +154,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Contact",
-    "modified": 1538770883
+    "modified": 1541788482
 }

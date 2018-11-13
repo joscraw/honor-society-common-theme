@@ -1,0 +1,70 @@
+{
+    "key": "group_5ba30682b53d8",
+    "title": "General Information",
+    "fields": [
+        {
+            "key": "field_5ba3068e3fd8d",
+            "label": "Report Type",
+            "name": "report_type",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "user_roles": [
+                "all"
+            ],
+            "choices": {
+                "direct_mailing": "Direct Mailing"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5bea21d2c5f62",
+            "label": "Report URL",
+            "name": "report_url",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "user_roles": [
+                "all"
+            ],
+            "default_value": "",
+            "placeholder": "Don't set this yourself. This URL will be created once the report has finished."
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "reports"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "Report",
+    "modified": 1542070278
+}
