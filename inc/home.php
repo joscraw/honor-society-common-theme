@@ -3,16 +3,6 @@
         get_template_part('partials/content', 'upcharge' );
     }
 
-    if ( key_exists("complete-profile", $_REQUEST )) {
-        $student_profile = get_page_by_template_filename( 'template-student-profile.php' );
-
-        if( !empty( $student_profile ) ) {
-            $str = urlencode("type=success&message=Please finish filling out your profile so we can learn more about you and help tailor your experie");
-            wp_redirect( get_permalink( $student_profile[0]->ID ) . "?$str" );
-            exit;
-        }
-    }
-
 ?>
 
 <div class="main-content">

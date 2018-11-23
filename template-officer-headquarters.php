@@ -4,6 +4,10 @@
  */
 
 get_header(); ?>
+
+<?php
+global $CRMConnectorPlugin;
+?>
     <main class="nscs-hq__container">
             <div class="tab">
                 <a href="<?php echo admin_url('post-new.php?post_type=chapter_update'); ?>">Send Chapter Update Email</a>
@@ -19,11 +23,7 @@ get_header(); ?>
                 <?php endif; ?>
             </div>
             <div class="tab">
-                <?php
-                $user = wp_get_current_user();
-                $current_user_roles = ['chapter_officer', 'chapter_president', 'chapter_advisor', 'administrator'];
-                $accessible_roles = (array) $user->roles;
-                if($current_user_roles !== array_diff($current_user_roles, $accessible_roles)) : ?>
+                <?php if($CRMConnectorPlugin->data['is_chapter_leader'] || $CRMConnectorPlugin->data['is_system_administrator']) : ?>
                     <a href="<?php echo admin_url('post-new.php?post_type=officer_material'); ?>">Create Officer Material</a>
                 <?php endif; ?>
             </div>

@@ -7,7 +7,7 @@ get_header(); ?>
 
 <main class="main-content">
 
-    <div class="breadcrumb">
+    <div class="breadcrumb clearfix">
         <div class="breadcrumb-icon">
             <img src="<?php echo get_template_directory_uri() . '/assets/images/hat_icon.png'; ?>">
         </div>

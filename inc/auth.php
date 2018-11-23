@@ -83,6 +83,37 @@ function nscs_student_profile_page_middleware(){
     }
 }
 
+add_action( 'template_redirect', 'nscs_contact_chapter_association_middleware', 2 );
+function nscs_contact_chapter_association_middleware(){
+
+    global $CRMConnectorPlugin;
+    $template_basename = basename( get_page_template() );
+
+    if(!is_user_logged_in()) {
+        return;
+    }
+
+    if($template_basename === 'template-contact-chapter-association.php') {
+        return;
+    }
+
+    if(is_admin()) {
+        return;
+    }
+
+    // If a chapter or contact record has not been associated
+    if (!empty($CRMConnectorPlugin->data['associated_contact']->ID) && !empty($CRMConnectorPlugin->data['associated_contact']->chapter->ID)){
+        return;
+    }
+
+    $contact_chapter_association = get_page_by_template_filename( 'template-contact-chapter-association.php' );
+
+    if( !empty( $contact_chapter_association ) ) {
+        wp_redirect( get_permalink( $contact_chapter_association[0]->ID ) );
+        exit;
+    }
+}
+
 /*
  * Intercept students to the registration within the member portal
 */
