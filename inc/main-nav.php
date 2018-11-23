@@ -15,7 +15,6 @@
     jQuery(document).ready(function($) {
 
         $(".hamburger-menu-icon").click(function(){
-            console.log("hi");
              $(".menu-primary-menu-container").toggleClass('menu-active');
             $(".main-content").toggleClass('menu-active');
         });

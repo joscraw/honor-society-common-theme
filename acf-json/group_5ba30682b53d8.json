@@ -47,6 +47,131 @@
             ],
             "default_value": "",
             "placeholder": "Don't set this yourself. This URL will be created once the report has finished."
+        },
+        {
+            "key": "field_5bf1849ace6d8",
+            "label": "Drop",
+            "name": "drop",
+            "type": "post_object",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ba3068e3fd8d",
+                        "operator": "==",
+                        "value": "direct_mailing"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "user_roles": [
+                "all"
+            ],
+            "post_type": [
+                "drops"
+            ],
+            "taxonomy": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1
+        },
+        {
+            "key": "field_5bf184c4ce6d9",
+            "label": "Chapter",
+            "name": "chapter",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ba3068e3fd8d",
+                        "operator": "==",
+                        "value": "direct_mailing"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "user_roles": [
+                "all"
+            ],
+            "post_type": [
+                "chapters"
+            ],
+            "taxonomy": [],
+            "allow_null": 1,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1
+        },
+        {
+            "key": "field_5bf5915a3930c",
+            "label": "Date Comparison",
+            "name": "date_comparison",
+            "type": "select",
+            "instructions": "Query all contacts who's prospect load date is less than, greater than, or equal to desired prospect load date",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "user_roles": [
+                "all"
+            ],
+            "choices": {
+                "<": "<",
+                "=": "=",
+                ">": ">"
+            },
+            "default_value": [
+                "="
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5bf5904229ff4",
+            "label": "Desired Prospect Load Date",
+            "name": "desired_prospect_load_date",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ba3068e3fd8d",
+                        "operator": "==",
+                        "value": "direct_mailing"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "user_roles": [
+                "all"
+            ],
+            "display_format": "m\/d\/Y",
+            "return_format": "m\/d\/Y",
+            "first_day": 1
         }
     ],
     "location": [
@@ -66,5 +191,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Report",
-    "modified": 1542070278
+    "modified": 1542820442
 }

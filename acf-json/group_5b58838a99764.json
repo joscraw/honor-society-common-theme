@@ -237,6 +237,33 @@
             "ui": 0,
             "ui_on_text": "",
             "ui_off_text": ""
+        },
+        {
+            "key": "field_5bf742e1f0c69",
+            "label": "Profile Picture",
+            "name": "profile_picture",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "user_roles": [
+                "all"
+            ],
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "jpeg, jpg, gif, png"
         }
     ],
     "location": [
@@ -271,5 +298,5 @@
     ],
     "active": 1,
     "description": "Contact",
-    "modified": 1541789669
+    "modified": 1542931227
 }

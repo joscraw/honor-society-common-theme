@@ -176,7 +176,15 @@
          * User can continue to homepage
          */
         $('.nscs-button__continue-to-home').click(function() {
-            window.location = window.location.pathname;
+
+            <?php
+            $student_profile = get_page_by_template_filename( 'template-student-profile.php' );
+            if( !empty( $student_profile ) ) {
+                $str = "type=success&message=Please finish filling out your profile so we can learn more about you and help tailor your experience";
+                $redirect_url = get_permalink( $student_profile[0]->ID ) . "?$str";
+            }
+            ?>
+            window.location = "<?php echo $redirect_url; ?>"
         })
     });
 </script>

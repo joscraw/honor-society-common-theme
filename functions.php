@@ -5,6 +5,8 @@
  * Enable ACF 5 early access
  * Requires at least version ACF 4.4.12 to work
  */
+use CRMConnector\CreateMediaFile;
+
 define('ACF_EARLY_ACCESS', '5');
 
 include( dirname( __FILE__ ) . '/inc/woocommerce-dynamic-payment.php');
@@ -179,3 +181,102 @@ add_action( 'tribe_events_pre_get_posts', function($query) {
     }
 
 }, 10, 1 );
+
+/*
+ * Student Sign up Form Submission
+ */
+function nscs_ajax_save_student_profile() {
+
+    /*check_ajax_referer( 'student_signup', 'nonce' );*/
+
+    $contact    = $_POST["contact"];
+    $first_name = $_POST["first_name"];
+    $last_name 	= $_POST["last_name"];
+    $email 		= $_POST["email"];
+    $password 	= $_POST["password"];
+    $gender 	= $_POST["gender"];
+    $ethnicity 	= $_POST["ethnicity"];
+    $age 	    = $_POST["age"];
+    $date_of_birth 	= $_POST["date_of_birth"];
+    $non_traditional_student = $_POST['non_traditional_student'];
+    $first_to_go_to_college = $_POST['first_to_go_to_college'];
+    $veteran = $_POST['veteran'];
+    $previous_school = $_POST['previous_school'];
+    $other_honor_societies = $_POST['other_honor_societies'];
+    $parent_first_name = $_POST['parent_first_name'];
+    $parent_last_name = $_POST['parent_last_name'];
+    $parent_email = $_POST['parent_email'];
+    $parent_2_first_name = $_POST['parent_2_first_name'];
+    $parent_2_last_name = $_POST['parent_2_last_name'];
+    $parent_2_email = $_POST['parent_2_email'];
+    $non_traditional_student_reason = $_POST['non_traditional_student_reason'];
+    $scholar_connection_newsletter_emails = $_POST['scholar_connection_newsletter_emails'];
+    $chapter_emails = $_POST['chapter_emails'];
+    $scholarship_emails = $_POST['scholarship_emails'];
+    $opt_out = $_POST['opt_out'];
+    $email_opt_out = $_POST['email_opt_out'];
+    $do_not_mail = $_POST['do_not_mail'];
+    $do_not_call = $_POST['do_not_call'];
+
+    new CreateMediaFile($_FILES['profile_picture'], 'profile_picture', $contact);
+
+    if ( username_exists( $email ) || get_user_by( 'email', $email ) ) {
+        $already_existing_user = get_user_by( 'email', $email );
+        if($already_existing_user->ID !== get_current_user_id()) {
+            echo json_encode(array(
+                "success" => false,
+                "message" => "The email '$email' is already in use"
+            ));
+            die();
+        }
+    }
+
+    update_post_meta($contact, 'first_name', $first_name);
+    update_post_meta($contact, 'last_name', $last_name);
+    update_post_meta($contact, 'email', $email);
+    update_post_meta($contact, 'gender', $gender);
+    update_post_meta($contact, 'ethnic_identity', $ethnicity);
+    update_post_meta($contact, 'age', $age);
+    update_field('birthdate', $date_of_birth, $contact);
+    update_field('first_generation_student', $first_to_go_to_college, $contact);
+    update_field('non-traditional_student', $non_traditional_student, $contact);
+    update_field('non-traditional_student_reason', $non_traditional_student_reason, $contact);
+    update_field('veteran', $veteran, $contact);
+    update_field('previous_school', $previous_school, $contact);
+    update_field('other_honor_societies', $other_honor_societies, $contact);
+    update_field('parent_first_name', $parent_first_name, $contact);
+    update_field('parent_last_name', $parent_last_name, $contact);
+    update_field('parent_email', $parent_email, $contact);
+    update_field('parent_2_first_name', $parent_2_first_name, $contact);
+    update_field('parent_2_last_name', $parent_2_last_name, $contact);
+    update_field('parent_2_email', $parent_2_email, $contact);
+    update_field('opt_out', $opt_out, $contact);
+    update_field('email_opt_out', $email_opt_out, $contact);
+    update_field('do_not_call', $do_not_call, $contact);
+    update_field('do_not_mail', $do_not_mail, $contact);
+    update_field('email_scholar_connection_enewsletter', $scholar_connection_newsletter_emails, $contact);
+    update_field('email_chapter_emails', $chapter_emails, $contact);
+    update_field('email_scholarships', $scholarship_emails, $contact);
+
+    $user_info = array(
+        'ID'            => get_current_user_id(),
+        'user_login'  	=> $email,
+        'user_email' 	=> $email,
+        'first_name'	=> $first_name,
+        'last_name'		=> $last_name,
+    );
+
+    if(!empty($password)) {
+       $user_info['user_pass'] = $password;
+    }
+
+    wp_update_user($user_info);
+
+    echo json_encode(array(
+        "success" => true,
+        "message" => "Profile successfully updated"
+    ));
+
+    die();
+}
+add_action('wp_ajax_student_profile', 'nscs_ajax_save_student_profile');

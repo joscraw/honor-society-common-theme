@@ -53,7 +53,7 @@ body {
     }
 
     .main-nav .menu-primary-menu-container.menu-active {
-        height: 230px;
+        height: 350px;
     }
 
     .homepage-moot-container, .homepage-calendar {
@@ -66,6 +66,27 @@ body {
     .homepage-moot-container, .homepage-calendar {
         padding: 0 !important;
     }
+
+    .breadcrumb {
+        display: block !important;
+    }
+
+    .breadcrumb-icon {
+        float: left !important;
+    }
+
+    .breadcrumb-title {
+        float: left !important;
+    }
+
+    .search-form {
+        position: static !important;
+    }
+
+    .officer-materials-container-body a {
+        display: block;
+    }
+
 }
 
 @media only screen and (max-width: 525px) {
@@ -107,7 +128,7 @@ p, span {
     padding-right: 20px;
 }
 
-.breadcrumb-title h1 {
+.breadcrumb-title h1, .profile-sub-title h2, .profile-sub-title p {
     color: #383838;
 }
 
@@ -120,7 +141,43 @@ img {
     display: block;
     max-width: 100%;
 }
+.nscs-main-message {
+    color: #FFFFFF;
+    padding: 15px 12px;
+    border-radius: 3px;
+    font-size: 12px;
+    margin: 0 0 5px;
+}
 
+.nscs-main-message.nscs-main-message_error {
+    background-color: #9E1D25;
+}
+
+.nscs-main-message.nscs-main-message_success {
+    background-color: #6DA0A9;
+}
+
+.pagination {
+    margin-top: 20px;
+}
+
+.pagination a, .pagination span {
+    padding: 5px 15px;
+    border-radius: 3px;
+    margin-right: 10px;
+    text-decoration: none;
+    font-family: avenir, 'sans-serif';
+}
+
+.pagination .current {
+    background: #f0f0f0;
+    color: #727272;
+}
+
+.pagination .inactive {
+    background-color: #9E1D25;
+    color: #FFFFFF;
+}
 
 /*************************************************** END UITLS ***************************************************/
 
@@ -178,7 +235,7 @@ img {
 /*************************************************** END MAIN NAV STYLES ***************************************************/
 
 /*************************************************** START MAIN CONTENT STYLES ***************************************************/
-.main-content {
+.main-content, .flash-message-container {
     margin: 0 auto;
     max-width: 1200px;
 }
@@ -289,6 +346,41 @@ img {
 
 /*************************************************** END SCHOLARSHIPS STYLES ***************************************************/
 
+/*************************************************** START OFFICER MATERIALS STYLES ***************************************************/
+
+.officer-materials-container {
+    border-bottom: 1px solid #D8D8D8;
+}
+
+.officer-materials-container-header {
+    justify-content: space-between;
+    display: flex;
+}
+
+.officer-materials-container-body {
+    color: #666666;
+    font-family: 'EB Garamond', serif;
+    margin-bottom: 20px;
+}
+
+.officer-materials-container-body a {
+    padding: 12px 40px;
+    background-color: #9E1D25;
+    color: #FFFFFF;
+    line-height: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-family: avenir, 'sans-serif';
+}
+
+.officer-materials-container-footer {
+    color: #9E1D25;
+    margin-bottom: 20px;
+}
+
+
+
+/*************************************************** END OFFICER MATERIALS STYLES ***************************************************/
 
 .page-template-template-student-signup header,
 .page-template-template-student-signup footer,
@@ -309,6 +401,9 @@ label {
 
 input[type="text"],
 input[type="password"],
+input[type="date"],
+input[type="number"],
+input[type="search"],
 select, textarea {
     height: 2.5rem;
     line-height: 2.5rem;
@@ -319,6 +414,13 @@ select, textarea {
     font-size: 0.9rem;
     border-radius: 0.25rem;
 }
+
+select[name="other_honor_societies"] {
+    height: auto;
+    line-height: normal;
+    padding: 5px 5px;
+}
+
 
 textarea {
     height: 20.0rem;

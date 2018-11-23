@@ -208,8 +208,8 @@
         },
         {
             "key": "field_5b57cdb220eea",
-            "label": "Chapter Advisor",
-            "name": "chapter_advisor_",
+            "label": "Chapter Advisors",
+            "name": "chapter_advisors",
             "type": "post_object",
             "instructions": "",
             "required": 0,
@@ -233,8 +233,8 @@
         },
         {
             "key": "field_5b57cdc720eeb",
-            "label": "Chapter President",
-            "name": "chapter_president_",
+            "label": "Chapter Presidents",
+            "name": "chapter_presidents",
             "type": "post_object",
             "instructions": "",
             "required": 0,
@@ -258,8 +258,8 @@
         },
         {
             "key": "field_5b8d82f012d28",
-            "label": "Chapter Officer",
-            "name": "chapter_officer",
+            "label": "Chapter Officers",
+            "name": "chapter_officers",
             "type": "post_object",
             "instructions": "",
             "required": 0,
@@ -474,5 +474,5 @@
     ],
     "active": 1,
     "description": "Chapter",
-    "modified": 1541961106
+    "modified": 1542571008
 }

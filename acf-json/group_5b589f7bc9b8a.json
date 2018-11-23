@@ -76,8 +76,11 @@
                 "class": "",
                 "id": ""
             },
-            "display_format": "d\/m\/Y",
-            "return_format": "d\/m\/Y",
+            "user_roles": [
+                "all"
+            ],
+            "display_format": "Y-m-d",
+            "return_format": "Y-m-d",
             "first_day": 1
         },
         {
@@ -195,7 +198,7 @@
             ],
             "choices": {
                 "Attend Part-Time": "Attend Part-Time",
-                "Financially Independant": "Financially Independant",
+                "Financially Independent": "Financially Independent",
                 "Work Full Time": "Work Full Time"
             },
             "default_value": [],
@@ -228,7 +231,7 @@
         {
             "key": "field_5bb686d3d8c7b",
             "label": "Previous School",
-            "name": "",
+            "name": "previous_school",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -238,6 +241,9 @@
                 "class": "",
                 "id": ""
             },
+            "user_roles": [
+                "all"
+            ],
             "default_value": "",
             "placeholder": "",
             "prepend": "",
@@ -262,5 +268,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1541788790
+    "modified": 1542929722
 }

@@ -43,6 +43,47 @@ function nscs_student_signup_middleware(){
 }
 
 /*
+ * Intercept students on the profile page
+*/
+/*add_action( 'template_redirect', 'nscs_student_profile_page_middleware', 1 );*/
+function nscs_student_profile_page_middleware(){
+
+    global $post;
+    if ( $post && get_post_meta( $post->ID, '_page-protected', true ) === 'no') {
+        return;
+    }
+
+    $template_basename = basename( get_page_template() );
+    if($template_basename !== "template-student-profile.php") {
+        return;
+    }
+
+    // we already have middleware for if the user is not logged in
+    if (!is_user_logged_in() ) {
+    return;
+    }
+
+    $contact_search = new \CRMConnector\Database\ContactSearch();
+    $user_id = get_current_user_id();
+    $contacts = $contact_search->get_post_from_args([
+        'key' => 'portal_user',
+        'value' => $user_id,
+        'compare' => '=',
+    ]);
+
+    if(!empty($contacts) && $contacts[0]->ID) {
+        return;
+    }
+
+    $portal_page = get_page_by_template_filename( 'template-member-portal.php' );
+    if( !empty( $portal_page ) ) {
+        $str = urlencode("type=error&message=To access the student profile page you must have an associated contact record in the crm");
+        wp_redirect( get_permalink( $portal_page[0]->ID ) . "?$str" );
+        exit;
+    }
+}
+
+/*
  * Intercept students to the registration within the member portal
 */
 add_action( 'template_redirect', 'nscs_student_registration_middleware', 2 );

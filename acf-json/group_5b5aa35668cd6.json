@@ -38,8 +38,8 @@
         },
         {
             "key": "field_5b5aa3661a8f5",
-            "label": "Advisors",
-            "name": "advisors",
+            "label": "Chapter Advisors",
+            "name": "chapter_advisors",
             "type": "post_object",
             "instructions": "",
             "required": 0,
@@ -63,8 +63,8 @@
         },
         {
             "key": "field_5b5aa3821a8f6",
-            "label": "Chapter President",
-            "name": "chapter_president",
+            "label": "Chapter Presidents",
+            "name": "chapter_presidents",
             "type": "post_object",
             "instructions": "",
             "required": 0,
@@ -144,5 +144,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1541961484
+    "modified": 1542571050
 }
