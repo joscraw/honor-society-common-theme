@@ -15,7 +15,11 @@
                         <div class="tab-icon">
                             <img src="<?php echo get_template_directory_uri() . '/assets/images/tab-people.png'; ?>">
                         </div>
-                        <a href="#"><span>CHAPTER NETWORK</span></a>
+                        <?php
+                        $chapter_network_page = get_page_by_template_filename( 'template-chapter-network.php' );
+                        if( !empty( $chapter_network_page ) ) : ?>
+                            <a href="<?php echo  get_permalink( $chapter_network_page[0]->ID ); ?>"><span>CHAPTER NETWORK</span></a>
+                        <?php endif; ?>
                     </div>
                     <div class="tab">
                         <div class="tab-icon">
@@ -45,7 +49,11 @@
                         <div class="tab-icon">
                             <img src="<?php echo get_template_directory_uri() . '/assets/images/tab-person.png'; ?>">
                         </div>
-                        <a href="#"><span>OFFICER HQ</span></a>
+                        <?php
+                        $officer_hq_page = get_page_by_template_filename( 'template-officer-headquarters.php' );
+                        if( !empty( $officer_hq_page ) ) : ?>
+                            <a href="<?php echo  get_permalink( $officer_hq_page[0]->ID ); ?>"><span>OFFICER HQ</span></a>
+                        <?php endif; ?>
                     </div>
                     <?php
                     global $CRMConnectorPlugin;

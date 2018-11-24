@@ -397,8 +397,46 @@ img {
 }
 
 
-
 /*************************************************** END OFFICER MATERIALS STYLES ***************************************************/
+
+/*************************************************** START CHAPTER NETWORK STYLES ***************************************************/
+
+.contacts-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact-container {
+    width: 33%;
+}
+
+.contact-container-body img {
+    border-radius: 50%;
+    float: left;
+}
+
+.contact-container {
+    margin-top: 50px;
+}
+
+.contact-container-body .profile_picture {
+
+}
+
+.contact-container-body .student_name {
+    color: #666666;
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 800px) {
+
+    .contact-container {
+        width: 100%;
+    }
+
+}
+/*************************************************** END CHAPTER NETWORK STYLES ***************************************************/
+
 
 .page-template-template-student-signup header,
 .page-template-template-student-signup footer,

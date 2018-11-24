@@ -253,6 +253,8 @@ add_action('wp_ajax_student_profile', 'nscs_ajax_save_student_profile');
 
 function nscs_ajax_change_contact_chapter_association() {
 
+    check_ajax_referer('contact_chapter_association', 'nonce');
+
     global $CRMConnectorPlugin;
     $chapter    = $_POST["chapter"];
     update_post_meta($CRMConnectorPlugin->data['contact_id'], 'account_name', $chapter);
