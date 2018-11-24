@@ -338,7 +338,7 @@ $contact = $contact_search->get_post_from_args([
                         data = JSON.parse(data);
 
                         if( !!data.success ) {
-                            window.location = window.location.pathname + '?extras=true';
+                            window.location = window.location.pathname + '?type=success&message=Profile Successfully Updated!';
                         } else {
                             $('.nscs-auth__message').html(data.message);
                         }

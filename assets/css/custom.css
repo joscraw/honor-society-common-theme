@@ -14,6 +14,15 @@ body {
     padding: 0 20px;
 }
 
+p, footer a {
+    color: #666666;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #9E1D25;
+}
+
 .main-header {
     position: relative;
 }
@@ -186,6 +195,7 @@ img {
     height: 0;
     clear: both;
 }
+
 
 /*************************************************** END UITLS ***************************************************/
 

@@ -101,9 +101,39 @@ function nscs_contact_chapter_association_middleware(){
         return;
     }
 
-    // If a chapter or contact record has not been associated
+    // If a chapter or contact record is associated
     if (!empty($CRMConnectorPlugin->data['associated_contact']->ID) && !empty($CRMConnectorPlugin->data['associated_contact']->chapter->ID)){
         return;
+    }
+
+    // go ahead and dynamically create a contact for the administrator if no contact record exists
+    if($CRMConnectorPlugin->data['is_system_administrator'] && empty($CRMConnectorPlugin->data['associated_contact']->ID)) {
+
+        $post_id = wp_insert_post([
+            "post_title"    =>  $CRMConnectorPlugin->data['current_user_first_name'] . ' ' . $CRMConnectorPlugin->data['current_user_last_name'],
+            "post_type"     =>  'contacts',
+            "post_status"   =>  'publish',
+        ], true);
+
+        if(update_post_meta($post_id, 'email', $CRMConnectorPlugin->data['current_user_email'])) {
+            do_action('save_post', $post_id, get_post($post_id), true);
+        }
+
+        if(update_post_meta($post_id, 'first_name', $CRMConnectorPlugin->data['current_user_first_name'])) {
+            do_action('save_post', $post_id, get_post($post_id), true);
+        }
+
+        if(update_post_meta($post_id, 'last_name', $CRMConnectorPlugin->data['current_user_last_name'])) {
+            do_action('save_post', $post_id, get_post($post_id), true);
+        }
+
+        if(update_post_meta($post_id, 'full_name', $CRMConnectorPlugin->data['current_user_first_name'] . ' ' . $CRMConnectorPlugin->data['current_user_last_name'])) {
+            do_action('save_post', $post_id, get_post($post_id), true);
+        }
+
+        if(update_post_meta($post_id, 'portal_user', $CRMConnectorPlugin->data['current_user_id'])) {
+            do_action('save_post', $post_id, get_post($post_id), true);
+        }
     }
 
     $contact_chapter_association = get_page_by_template_filename( 'template-contact-chapter-association.php' );

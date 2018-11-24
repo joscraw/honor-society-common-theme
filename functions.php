@@ -134,50 +134,18 @@ add_filter( 'tribe_events_list_show_date_headers', function() {
 // If the user is an admin then show all events
 add_action( 'tribe_events_pre_get_posts', function($query) {
 
-    $user = wp_get_current_user();
-    $current_user_roles = $user->roles;
-    $current_user_id = get_current_user_id();
-    $all_chapter_roles = ['administrator', 'honor_society_admin'];
-    $limited_chapter_roles = ['student', 'chapter_adviser', 'chapter_officer'];
+    global $CRMConnectorPlugin;
 
-    $all_chapter_roles = array_filter($all_chapter_roles, function($role) use($current_user_roles) {
-        return in_array($role, $current_user_roles);
-    });
+    $query->query_vars['posts_per_page'] = 10;
 
-    $limited_chapter_roles = array_filter($limited_chapter_roles, function($role) use($current_user_roles) {
-        return in_array($role, $current_user_roles);
-    });
-
-    if(!empty($all_chapter_roles)) {
-        // noop
-        $name = "Josh";
-    }
-
-    if(!empty($limited_chapter_roles)) {
-        $posts = get_posts([
-            'post_type' => 'contacts',
-            'posts_per_page' => 1,
-            'meta_query' => array(
-                array(
-                    'key' => 'portal_user',
-                    'value' => $current_user_id,
-                    'compare' => '=',
-                ),
+    if(!empty($CRMConnectorPlugin->data['chapter_id'])) {
+        $query->query_vars['meta_query'][] = array(
+            array(
+                'key' => 'chapter',
+                'value' => $CRMConnectorPlugin->data['chapter_id'],
+                'compare' => 'LIKE',
             ),
-        ]);
-
-        if( !empty($posts) ) {
-            $chapter_id = get_post_meta($posts[0]->ID, 'account_name', true);
-
-            $query->query_vars['posts_per_page'] = 10;
-            $query->query_vars['meta_query'][] = array(
-                array(
-                    'key' => 'chapter',
-                    'value' => $chapter_id,
-                    'compare' => 'LIKE',
-                ),
-            );
-        }
+        );
     }
 
 }, 10, 1 );
@@ -187,7 +155,7 @@ add_action( 'tribe_events_pre_get_posts', function($query) {
  */
 function nscs_ajax_save_student_profile() {
 
-    /*check_ajax_referer( 'student_signup', 'nonce' );*/
+    check_ajax_referer( 'student_profile', 'nonce' );
 
     $contact    = $_POST["contact"];
     $first_name = $_POST["first_name"];
@@ -280,3 +248,30 @@ function nscs_ajax_save_student_profile() {
     die();
 }
 add_action('wp_ajax_student_profile', 'nscs_ajax_save_student_profile');
+
+
+
+function nscs_ajax_change_contact_chapter_association() {
+
+    global $CRMConnectorPlugin;
+    $chapter    = $_POST["chapter"];
+    update_post_meta($CRMConnectorPlugin->data['contact_id'], 'account_name', $chapter);
+    $chapter_name = get_post_meta($chapter, 'account_name', true);
+
+
+    $redirect_url = '/';
+    $portal= get_page_by_template_filename( 'template-member-portal.php' );
+    if( !empty( $portal ) ) {
+        $str = sprintf('type=success&message=Chapter successfully joined. You are now inside the %s portal', $chapter_name);
+        $redirect_url = get_permalink( $portal[0]->ID ) . "?$str";
+    }
+
+    echo json_encode(array(
+        "success" => true,
+        "message" => sprintf('Chapter successfully joined. You are now inside the %s portal', $chapter_name),
+        "redirect_url" => $redirect_url
+    ));
+
+    die();
+}
+add_action('wp_ajax_contact_chapter_association', 'nscs_ajax_change_contact_chapter_association');
