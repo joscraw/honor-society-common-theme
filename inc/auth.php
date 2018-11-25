@@ -191,6 +191,7 @@ function nscs_ajax_create_student(){
     $last_name 	= $_POST["last_name"];
     $email 		= $_POST["email"];
     $password 	= $_POST["password"];
+    $invitation_code = $_POST['invitation_code'];
 
     // Check if a user email already exists
     if ( username_exists( $email ) || get_user_by( 'email', $email ) ) {
@@ -203,6 +204,32 @@ function nscs_ajax_create_student(){
         ));
     } else {
 
+
+        $contact = get_posts( array(
+            'post_type' => 'contacts',
+            'meta_key'  => 'email',
+            'meta_value' => $email
+
+        ));
+
+        if( ! empty( $contact ) ) {
+            $contact_search = new \CRMConnector\Database\ContactSearch();
+            $contactArray = $contact_search->get_post_with_meta_values_from_post_id(\CRMConnector\Database\ContactSearch::POST_TYPE, $contact[0]->ID);
+            $contact = \CRMConnector\Database\ContactHydrator::toObject($contactArray, new \CRMConnector\Models\Contact());
+
+            if(!$contact->invitation_code_belongs_to_user($invitation_code)) {
+                echo json_encode( array(
+                    'error' => "That Invitation Code is not a valid code"
+                ));
+                die();
+            } else {
+                update_field('password_joined_on', $invitation_code, $contact->ID);
+            }
+        }
+
+
+
+
         $new_student_id = wp_insert_user( array(
             'user_login'  	=> $email,
             'user_email' 	=> $email,
@@ -214,17 +241,10 @@ function nscs_ajax_create_student(){
 
         if ( !is_wp_error( $new_student_id ) ) {
 
-            // Set the user to contact
-            $contact = get_posts( array(
-                'post_type' => 'contacts',
-                'meta_key'  => 'email',
-                'meta_value' => $email
-
-            ));
-
             if( ! empty( $contact ) ) {
-                update_field('portal_user', $new_student_id, $contact[0]->ID);
+                update_field('portal_user', $new_student_id, $contact->ID);
             }
+
 
 
             wp_signon( array(

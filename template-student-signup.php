@@ -28,6 +28,11 @@ get_header(); ?>
                 </div>
 
                 <div class="input-group">
+                    <label for="Invitation_Code">Enter Invitation Code</label>
+                    <input type="text" name="invitation_code" id="invitation_code" placeholder="For e.g. “JC8932jklfsLL”" required title="Please enter in the invitation code you received to join.">
+                </div>
+
+                <div class="input-group">
                     <label for="email">Enter email address</label>
                     <input type="text" name="email" id="email" placeholder="For e.g. “you@yourdomain.com”" required
                         pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
