@@ -3,6 +3,7 @@
  * Template Name: Member Portal
  **/
 
+
     // update_user_meta( $current_user->ID, 'registered', 0 );
 
     if( !is_user_logged_in() ) {

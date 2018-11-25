@@ -44,7 +44,11 @@ get_header(); ?>
                 <div class="contact-container-header"></div>
                 <div class="contact-container-body">
                     <?php $profile_picture = get_field('profile_picture', get_the_ID()); ?>
-                    <img src="<?php echo $profile_picture['sizes']['thumbnail']; ?>">
+                    <?php if(!empty($profile_picture)): ?>
+                        <img style="border-radius: 50%" src="<?php echo $profile_picture['sizes']['thumbnail']; ?>">
+                    <?php else: ?>
+                        <img style="border-radius: 50%" width="150" height="131" src="<?php echo get_template_directory_uri() . '/assets/images/default-avatar.jpg'; ?>">
+                    <?php endif; ?>
                     <div class="student_name">
                         <?php echo get_field('full_name', get_the_ID()); ?>
                     </div>
@@ -57,12 +61,17 @@ get_header(); ?>
 
             <?php
         endwhile;
-        if (function_exists("pagination")) {
-            pagination($query->max_num_pages);
-        }
-        wp_reset_query();
         ?>
     </div>
+    <br>
+    <br>
+
+    <?php
+    if (function_exists("pagination")) {
+        pagination($query->max_num_pages);
+    }
+    wp_reset_query();
+    ?>
 
 </main>
 

@@ -105,7 +105,11 @@ $contact = $contact_search->get_post_from_args([
                 <input type="file" name="profile_picture">
                 <h4>Current Profile Picture</h4>
                 <?php $profile_picture = get_field('profile_picture', $contact[0]->ID); ?>
-                <img src="<?php echo $profile_picture['sizes']['thumbnail']; ?>">
+                <?php if(!empty($profile_picture)): ?>
+                <img style="border-radius: 50%" src="<?php echo $profile_picture['sizes']['thumbnail']; ?>">
+                <?php else: ?>
+                    <img style="border-radius: 50%" width="150" height="131" src="<?php echo get_template_directory_uri() . '/assets/images/default-avatar.jpg'; ?>">
+                <?php endif; ?>
             </div>
         </div>
 
